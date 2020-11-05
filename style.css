@@ -29,6 +29,7 @@ section{
     margin: 11rem 0;
 }
 .selected-works{
+    margin: 2rem 0;
     display: grid;
     grid-template-columns: 100px 87.5px 87.5px 100px;
     /* grid-template-rows: 200px 170px 130px 150px  */
@@ -77,8 +78,9 @@ ul{
     padding:1rem 1rem 0 1rem;
 }
 
-.selected-works div{
+.selected-works > div{
     border:1px solid blue;
+    margin:0.2rem;
 }
 
 .one{
@@ -134,21 +136,25 @@ ul{
 .twelve{
     grid-column: 1/3;
     grid-row:8;
+    background-color: #e23f12;
 }
 .thirteen{
     grid-column: 3/5;
-    grid-row:9;
-}
-.fourteen{
-    grid-column: 3/5;
     grid-row:8;
 }
-
-.fithteen{
-    grid-column: 1/2;
+.fourteen{
+    grid-column: 1/3;
     grid-row:9;
 }
 
+.fifthteen{
+    grid-column: 3/5;
+    grid-row:9;
+}
+.sixteen{
+    grid-column: 1/5;
+    grid-row:10;
+}
 
 
 /* playground */
@@ -183,22 +189,9 @@ ul{
     line-height: 1;
 } */
 
-/* a */
-@font-face {
-    font-family: Spacegrotesk-Medium;
-    src: url(fonts/spacegrotesk-medium.otf);
-}
-
-.a {
-    font-family: spacegrotesk-medium;
-    /* background-color: #000;
-    color: #fff; */
-    font-size: 4rem;
-    padding:1rem;
-}
 
 /* vimmerby */
-.eight a{
+.seven a{
     width:100%;
     height:100%;
 }
@@ -217,8 +210,6 @@ ul{
     background-color: #000000;
     color: #ff0000;
     padding: 1rem;
-    /* width: 100%;
-    height: 100%; */
 }
 
 textarea{
@@ -231,21 +222,57 @@ textarea{
 }
 
 /* letters */
-
 .letter{
     font-family: 'Raleway', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
     text-align: center;
-    min-height: 5vh;
+    min-height: 4vh;
     display: flex;
-  align-items: center;
-  justify-content: center;
-  padding:0.2rem;
+    align-items: center;
+    justify-content: center;
+    padding:0.1rem;
 }
+
 .fourteen {
-    background-color: #000;
-    color: #fff;
+    padding:0.4rem;
+    background-color: #fff;
+    color: #000;
     display: grid;
-   grid-template-columns: repeat(10, 1fr);
-   /* grid-auto-rows: 10px; */
+    grid-template-columns: repeat(10, 1fr);
+}
+
+
+/* clock */
+
+.clock{
+    width: 100px;
+    height:100px;
+    background-color: orange;
+    border-radius: 50px;
+    position: relative;
+    margin: auto;
+    
+
+}
+.hand{
+    position: absolute;
+    width:3px;
+    height:20px;
+    background-color: aquamarine;
+
+    bottom: 49px;
+    left:49px;
+    transform: rotate(90deg);
+    transform-origin: 50% 100%;
+
+}
+
+.minute {
+    height: 37px;
+}
+
+.second {
+    height: 45px;
+    width:1px;
+    background-color:#000;
 }

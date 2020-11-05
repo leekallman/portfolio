@@ -7,52 +7,87 @@
 //     $("span").html(font)
 // });
 
-// a
-let font;
-let graphic;
+// 
+// // a 
+// let font1, font2;
+// let graphic;
 
-function preload() {
-  font = loadFont('fonts/spacegrotesk-medium.otf')
-}
-function setup() {
-  createCanvas(200, 200)
-  
-  graphic = createGraphics(200, 200)
-  
-  graphic.fill('#fff')
-  graphic.textFont(font)
-  graphic.textAlign(CENTER, CENTER)
-  graphic.textSize(200)
-  graphic.text('a', 100, 100)
-  
-  const container = document.querySelector('.eight');
-  
-  const canvas1 = document.getElementById('defaultCanvas0');
-  container.appendChild(canvas1);//not working
-}
+// function preload() {
+//     font1 = loadFont('fonts/drake-neue.ttf')
+//     // font2 = loadFont('fonts/inter-var.woff2')
+//     console.log(font1)
+// }
 
-function draw() {
-  background("#000")
-  const tileSize = 25
-  for (let x = 0; x < 12; x = x + 1) {
-    for (let y = 0; y < 12; y = y + 1) {
-      
-      const distortion = sin(frameCount * 0.05 + x * 0.5 + y * 0.3) * 25
-      //source
-      const sx = x * tileSize + distortion
-      const sy = y * tileSize
-      const sw = tileSize
-      const sh = tileSize
 
-      //destination
-      const dx =  x * tileSize
-      const dy = y * tileSize
-      const dw = tileSize
-      const dh = tileSize
-      image(graphic,dx, dy, dw, dh, sx, sy, sw, sh)
-    }
-  }
-}
+// const sketch01 = function (graphic) {
+//     graphic.setup = function() {
+//         graphic.createCanvas(200, 200, graphic.WEBGL);
+        
+//         graphic.fill('#fff')
+//         graphic.textFont('helvetica')
+//         // graphic.textAlign(CENTER, CENTER)
+//         graphic.textSize(200)
+//         graphic.text('a', 100, 100)
+//     }
+//     // const container = document.querySelector('.eight');
+    
+//     // const canvas1 = document.getElementById('defaultCanvas0');
+//     // container.appendChild(canvas1);//not working
+    
+//     graphic.draw = function() {
+//         graphic.background("#000")
+//         const tileSize = 25
+//         for (let x = 0; x < 12; x = x + 1) {
+//             for (let y = 0; y < 12; y = y + 1) {
+//                 const distortion = sin(frameCount * 0.05 + x * 0.5 + y * 0.3) * 25
+//                 //source
+//                 const sx = x * tileSize + distortion
+//                 const sy = y * tileSize
+//                 const sw = tileSize
+//                 const sh = tileSize
+                
+//                 //destination
+//                 const dx =  x * tileSize
+//                 const dy = y * tileSize
+//                 const dw = tileSize
+//                 const dh = tileSize
+//                 image(graphic,dx, dy, dw, dh, sx, sy, sw, sh)
+//             }
+//         }
+//     }
+// }
+// // good morning - canvas2
+// const sketch02 = function (graphic) {
+//     graphic.setup = function(){
+//         graphic.createCanvas(200, 100, graphic.WEBGL);
+        
+//         graphic.fill("#004d9d")
+//         graphic.textSize(16)
+//         // graphic.textAlign(CENTER, CENTER)
+//         graphic.textLeading(200)
+//         graphic.textFont('helvetica')
+//         graphic.text("Good\nMorning", 100, 50)
+//     }
+//     // const container2 = document.querySelector('.twelve');
+    
+//     //   const canvas2 = document.getElementById('defaultCanvas0');
+//     //   container.appendChild(canvas1);//not working
+
+//     graphic.draw = function() {
+//         graphic.background("#e23f12")
+        
+//         const tileSize = 10
+//         for (let x = 0; x < 20; x = x + 1) {
+//             for (let y = 0 ; y < 10; y = y + 1) {  
+//             }
+//         }
+//         image(graphic, frameCount, 0, 200, 100)
+//     }
+// };
+
+// let canvas01 = new p5(sketch01, 'eight');
+// let canvas02 = new p5(sketch02, 'twelve');
+
 
 // typing
 document.querySelector("textarea").addEventListener("keyup", function(){
@@ -64,7 +99,7 @@ document.querySelector("textarea").addEventListener("keyup", function(){
     }
   })
   
-  // // good morning
+  // // // good morning
   // function setup(){
   //   createCanvas (200, 100)
   //   graphic2 = createGraphics(200, 100)
@@ -78,8 +113,8 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   
   //   const container2 = document.querySelector('.twelve');
     
-  //   // const canvas2 = document.getElementById('defaultCanvas1');
-  //   // container.appendChild(canvas2);
+  //   const canvas2 = document.getElementById('defaultCanvas1');
+  //   container2.appendChild(canvas2);
   // }
   
   // function draw(){
@@ -108,21 +143,49 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   
   document.addEventListener("mousemove", function (event) {
     
-    const x = event.pageX
-    const y = event.pageY
+    const x = event.pageX;
+    const y = event.pageY;
     
     document.querySelectorAll(".letter").forEach(div => {
       // find the distance for every letter div
-      const dx = div.offsetLeft + 50 - x
+      const dx = div.offsetLeft + 50 - x;
       // every div 100x100 (-x is to ignore the cursor)
-      const dy = div.offsetTop + 50 - y
-      const dist = Math.sqrt(dx * dx + dy * dy)
+      const dy = div.offsetTop + 50 - y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
       // distance(diagonal) is a^2 * b^2 = c^2
-      const score = Math.exp(dist * -0.005)
+      const score = Math.exp(dist * -0.005);
       // convert the distance to a "score" between 0 - 1 through an exponential-curve
       
       // div.innerHTML = score.toFixed(2)
-      div.style.transform ="scale(" + score + ")"
-      div.style.fontWeight = 100 + (100 * Math.round(8 * score))
-    })
-  })
+      div.style.transform ="scale(" + score + ")";
+      div.style.fontWeight = 100 + (100 * Math.round(8 * score));
+    });
+  });
+
+
+  // clock
+  function runClock() {
+    let now = new Date();
+    let hour = now.getHours() % 12;
+    let min = now.getMinutes();
+    let sec = now.getSeconds();
+    let ms = now.getMilliseconds();
+
+    const clock = document.querySelector('.clock');
+    const hourHand = clock.querySelector('.hour');
+    const minHand = clock.querySelector('.minute');
+    const secHand = clock.querySelector('.second');
+
+    let hourRotation = 360/12 * hour + 0.5 * min;
+    let minRotation = 6 * min + 0.1 * sec;
+    let secRotation = 6 * sec + 0.006 * ms;
+
+    hourHand.style.transform = 'rotate(' + hourRotation + 'deg)';
+    minHand.style.transform = 'rotate(' + minRotation + 'deg)';
+    secHand.style.transform = 'rotate(' + secRotation + 'deg)';
+
+
+    requestAnimationFrame(runClock);
+  }
+
+  runClock();
