@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:url" content="https://lisaleekallman.com">
-    <meta property="og:title" content="...">
-    <meta property="og:description" content="...">
-    <meta property="og:image" content="https://example.com/path/to/image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="...">
-    <meta property="og:image:width" content="...">
-    <meta property="og:image:height" content="...">
-    <meta property="og:site_name" content="...">
+    <meta property="og:url" content="https://leekallman.github.io/portfolio/">
+    <meta property="og:title" content="Lisa Lee - Frontend Developer">
+    <meta property="og:description" content="personal portfolio">
+    <meta property="og:image" content="https://leekallman.github.io/portfolio/images/lisalee.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:alt" content="photo of Lisa Lee">
+    <meta property="og:site_name" content="leekallman">
   </head>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans:400"
@@ -19,14 +17,16 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="components/header.js" type="text/javascript" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <title>Lisa Lee - Frontend Developer</title>
 </head>
 <body>
-    <header class="m-b" id="header">
+    <header-component></header-component>
+    <!-- <header class="m-b" id="header">
         <h1 class="t-u p-n">Hello,<br>Anyong<br>I'm Lisa Lee</h1>
         <hr class="line">
-    </header>
+    </header> -->
     <main>
         <section class="who">
             <img src="images/lisalee.jpg" alt="portrait of Lisa Lee" class="p-n" />
@@ -91,7 +91,7 @@
                 <h1 class="t-u p-n">Hello,<br>Anyong<br>I'm Lisa Lee</h1>
                 <hr class="line">
             </template>
-
+            <!-- <footer-component></footer-component> -->
         </body>
         </html>
         
