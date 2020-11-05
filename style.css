@@ -7,10 +7,10 @@
 body{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-
+    
 }
 header{
-
+    
 }
 
 h1{
@@ -55,6 +55,7 @@ img{
 a{
     color: black;
     text-decoration: none;
+    cursor:pointer;
 }
 
 a:hover{
@@ -112,25 +113,37 @@ ul{
     padding:0.5rem;
     background:red;
 }
-
 .seven{
-    grid-column: 2/5;
-    grid-row:3;
+    grid-column: 1/3;
+    grid-row:5;
 }
-.five{
-    grid-column: 2/5;
-    grid-row:3;
-}
-
 .eight{
+    grid-column: 3/5;
+    grid-row:4/6;
+    background-color: #000000;
+}
+.nine{
+    grid-column: 1/5;
+    grid-row:6;
+}
+.ten{
+    grid-column: 1/2;
+    grid-row:7;
+}
+.eleven{
     grid-column: 2/5;
-    grid-row:3;
+    grid-row:7;
+}
+.twelve{
+    grid-column: 1/3;
+    grid-row:8;
+}
+.thirteen{
+    grid-column: 1/3;
+    grid-row:10;
 }
 
-.nine{
-    grid-column: 2/5;
-    grid-row:3;
-}
+
 
 
 
@@ -140,14 +153,14 @@ ul{
     src: url(fonts/inter-var.woff2);
 }
 @keyframes animate-type{
-  0% {
-    font-variation-settings: "wght" 400, "slnt" 0;
-    letter-spacing: 0;
-  }
-  100% {
-    font-variation-settings: "wght" 900, "slnt" -8;
-    letter-spacing: 5px;
-  }
+    0% {
+        font-variation-settings: "wght" 400, "slnt" 0;
+        letter-spacing: 0;
+    }
+    100% {
+        font-variation-settings: "wght" 900, "slnt" -8;
+        letter-spacing: 5px;
+    }
 }
 .inner-container{
     width:275px;
@@ -162,13 +175,53 @@ ul{
 }
 
 /* re-size text */
-.resize{
+/* .resize{
     line-height: 1;
-}
+} */
 
 /* a */
 @font-face {
-    font-family: Spacegrotesk Medium;
-    src: url(spacegrotesk-medium.otf);
+    font-family: Spacegrotesk-Medium;
+    src: url(fonts/spacegrotesk-medium.otf);
 }
 
+.a {
+    font-family: spacegrotesk-medium;
+    /* background-color: #000;
+    color: #fff; */
+    font-size: 4rem;
+    padding:1rem;
+}
+
+/* vimmerby */
+.eight a{
+    width:100%;
+    height:100%;
+}
+
+/* typing */
+@font-face{
+    font-family: "Drake Neue";
+    src: url(fonts/drake-neue.ttf);
+}
+
+.nine{
+    font-family: Drake Neue;
+    font-size: 20px;
+    text-transform: lowercase;
+    word-break: break-word;
+    background-color: #000000;
+    color: #ff0000;
+    padding: 1rem;
+    /* width: 100%;
+    height: 100%; */
+}
+
+textarea{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
