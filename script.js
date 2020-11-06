@@ -160,7 +160,7 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   
   
   // letters
-  const letterBox = document.querySelector('.fourteen');
+  const letterBox = document.querySelector('.nine');
   const letters = ['F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y']
   
   for (let i = 0; i < letters.length; i++){
@@ -218,3 +218,45 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   }
 
   runClock();
+
+
+  // who I am
+  let phrases = [
+  
+    'I’m a digital creative and Frontend Developer..',
+    'I’m a digital creative and Frontend Developer based in Stockholm.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I\m a disguised nerd..',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I\m a nerd. So, I had to learn code.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I\m a nerd. So, I had to learn code. I started self-studying web design and code in the spring of 2020.',
+    
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019.',
+      
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island.',
+    
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of web design and graphic design.',
+      
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction.',
+    
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I come from the field of urban planning and architecture.',
+      
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture.',
+      
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity are key for qualitative and sustainable design.',
+      
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity, throughout the process, are key for qualitative design, leading to both business growth, societal prosperity and indivudual growth.'
+      ]
+    $("input").on("input", function (){
+      let value = $(this).val()
+      let phrase = phrases[value]
+      $("div.phrase").html(phrase)
+    })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
