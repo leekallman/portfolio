@@ -18,7 +18,7 @@ class Header extends HTMLElement {
         }
         </style>
         <header class="m-b" id="header">
-        <h1 class="t-u p-n">Hello,<br>Anyong<br>I'm Lisa Lee</h1>
+        <h1 class="t-u p-n" id="logo">Hello,<br>Anyong<br>I'm Lisa Lee</h1>
         <hr class="line">
         </header>
         `;

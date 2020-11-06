@@ -1,3 +1,32 @@
+
+// resize header
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    document.getElementById('logo').style.fontSize = '30px';
+  } else {
+    document.getElementById('logo').style.fontSize = '67px';
+  }
+}
+
+
+// book
+const two = document.querySelector('.two');
+  two.addEventListener('mousemove', function(event) {
+	const x = event.pageX;
+	const y = event.pageY;
+	const midX = x - window.innerWidth / 2;
+	const midY = y - window.innerHeight / 2;
+
+	const book = document.querySelector('.book')
+	book.style.left = x + 'px';
+	book.style.top = y + 'px';
+
+	book.style.transform = 'rotateX(' + (midY * 0.5) + 'deg)rotateY(' + midX + 'deg)';
+})
+
+
 // re-size text on scroll
 // $(document).on("scroll", function() {
 //     var pixels = $(document).scrollTop()
@@ -148,17 +177,17 @@ document.querySelector("textarea").addEventListener("keyup", function(){
     
     document.querySelectorAll(".letter").forEach(div => {
       // find the distance for every letter div
-      const dx = div.offsetLeft + 50 - x;
+      const dx = div.offsetLeft + 10 - x;
       // every div 100x100 (-x is to ignore the cursor)
-      const dy = div.offsetTop + 50 - y;
+      const dy = div.offsetTop + 10 - y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       // distance(diagonal) is a^2 * b^2 = c^2
-      const score = Math.exp(dist * -0.005);
+      const score = Math.exp(dist * -0.009);
       // convert the distance to a "score" between 0 - 1 through an exponential-curve
       
       // div.innerHTML = score.toFixed(2)
       div.style.transform ="scale(" + score + ")";
-      div.style.fontWeight = 100 + (100 * Math.round(8 * score));
+      div.style.fontWeight = 100 + (200 * Math.round(8 * score));
     });
   });
 
