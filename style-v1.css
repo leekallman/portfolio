@@ -1,0 +1,76 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    
+}
+
+h1{
+    font-size: 67px;
+    line-height: 0.8;
+    letter-spacing: -5px;
+    margin-bottom: 0.25rem;
+    transition: 0.5s;
+}
+
+.small{
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+hr{
+    height: 0.3px;
+}
+
+h2{
+    letter-spacing: -2px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p{
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+a:hover{
+    color: #FE0101;
+    transition: 0.5s ease;
+}
+
+ul{
+    list-style: none;
+}
+.social a{
+    margin-right: 0.5rem;
+}
+
+.t-u{
+    text-transform: uppercase;
+}
+.m-b{
+    margin-bottom: 2rem;
+}
+.p-n{
+    padding:1rem 1rem 0 1rem;
+}
+
