@@ -12,8 +12,8 @@
 
 
 // book
-const two = document.querySelector('.two');
-two.addEventListener('mousemove', function(event) {
+const five = document.querySelector('.five');
+five.addEventListener('mousemove', function(event) {
   const x = event.pageX;
   const y = event.pageY;
   const midX = x - window.innerWidth / 2;
@@ -21,9 +21,9 @@ two.addEventListener('mousemove', function(event) {
   
   const book = document.querySelector('.book')
   book.style.left = x + 'px';
-  book.style.top = y + 'px';
+  book.style.bottom = y + 'px';
   
-  book.style.transform = 'rotateX(' + (midY * 0.5) + 'deg)rotateY(' + midX + 'deg)';
+  book.style.transform = 'rotateX(' + midY + 'deg)rotateY(' + midX + 'deg)';
 })
 
 
