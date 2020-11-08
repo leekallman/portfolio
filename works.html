@@ -15,8 +15,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
   integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
   crossorigin="anonymous" />
-  <!-- ja components -->
-  <script src="components/header.js" type="text/javascript" defer></script>
   
   <!-- libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
@@ -26,7 +24,6 @@
   <title>Lisa Lee - Selected works</title>
 </head>
 <body>
-  <!-- <header-component></header-component> -->
   <main>
     <section class="selected-works">
       
@@ -51,7 +48,7 @@
       </div>
       
       <div class="four">
-        <a href="tortmagazine.com"><img src="images/tort.png" alt=""/></a>
+        <a href="tortmagazine.com" class="link"><img src="images/tort.png" alt=""/></a>
       </div>
       
       <div class="five" id="book">
@@ -72,6 +69,7 @@
       <div class="seven">
         <h3>Who I am</h3>
         <div class="phrase">
+          I’m a digital creative and Frontend Developer..
         </div>
         <input type="range" max=12 value=0>
       </div>
@@ -80,17 +78,24 @@
         <!-- <iframe src="https://editor.p5js.org/LisaLee/embed/FMkbQhd2g" style="border:none"></iframe> -->
       </div>
       
-      <div class="nine" id="letters">
-        
-      </div>
+      <div class="nine" id="letters"></div>
       
       <div class="ten" id="good morning">
         <div class="banner"></div>
         <!-- <iframe src="https://editor.p5js.org/LisaLee/embed/SteA8sE9r" style="border:none"></iframe> -->
       </div>
       
-      <div class="eleven" id="vimmerby">
-        <a href="http://vimmerbystugby.se/">
+      <div class="eleven" id="canvas">
+        <a href="http://canvas-magazine-29.superhi.com/" class="link">
+          <img
+          src="images/canvas.png"
+          alt="screenshot of canvas website"
+          />
+        </a>
+      </div>
+      
+      <div class="twelve" id="vimmerby">
+        <a href="http://vimmerbystugby.se/" class="link">
           <img
           src="images/vimmerbystugby.png"
           alt="illustration of vimmerby stugby"
@@ -98,54 +103,62 @@
         </a>
       </div>
       
-      <div class="twelve" id="southside">
-        <a href="southside19.com">
-          <img src="images/southside.png" alt="screenshot of southside project"
-          />
-        </a>
-      </div>
-      
       <div class="thirteen" id="wanderers">
-        <a href="https://wanderers-28.superhi.com/">
+        <a href="https://wanderers-28.superhi.com/" class="link">
           <img src="images/wanderers.png" alt="screenshot of wanderers project"
           />
         </a>
       </div>
-      
-      <div class="fourteen" id="typing">
-        <div class="typing">Start typing</div><textarea></textarea>
+      <div class="fourteen" id="asiansquat">
+        <a href="https://leekallman.github.io/asiansquat/" class="link">
+          <img src="images/asiansquat.png" alt="screenshot of asian squat project"
+          />
+        </a>
       </div>
       
-      
-      <div class="fifthteen" id="lovejoy">
-        <img src="images/lovejoy.png" alt="screenshot of portfolio website" />
-      </div>
-      <div class="sixteen">
-        <iframe src="https://editor.p5js.org/LisaLee/embed/8CXFBYVb4" style="border:none"></iframe>
-      </div>
-      
-      <div class="seventeen">
+      <div class="fifthteen" id="contact">
         <h3 class="contacts">Contact me</h3>
         <p class="contacts">
           I’ll be happy to answer any questions and pleased to meet over a online coffee. 
           Drop me a line →</p>
           <a href="mailto:lisa.lee.kallman@hyperisland.se">lisa.lee.kallman@hyperisland.se</a>
-        <br>
-        <br>
-        <p class="contacts">Stalk me on 
-          <div class="social">
-            <a href="https://www.linkedin.com/in/lisaleekallman/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/leekallman"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/lisaleel/"><i class="fab fa-instagram"></i></a>
-          </div>
-        </p>
-      </div>
-    </section>
-    
-    <!-- <script src="jquery-3.4.1.min.js"></script> -->
-    
-    <script src="script.js"></script>
-  </main>
-  <!-- <footer-component></footer-component> -->
-</body>
-</html>
+          <br>
+          <br>
+          <p class="contacts">Stalk me on 
+            <div class="social">
+              <a href="https://www.linkedin.com/in/lisaleekallman/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/leekallman"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/lisaleel/"><i class="fab fa-instagram"></i></a>
+            </div>
+          </p>
+        </div>
+        
+        <div class="sixteen">
+          <div class="typing">write your name here</div>
+          <textarea></textarea>
+        </div>
+        
+        <div class="seventeen">
+          <a href="https://leekallman.github.io/tortmagazine-v1/" class="link">
+            <img src="images/tort-v1.png" alt="screenshot of first draft tort website"
+            />
+          </a>
+          
+        </div>
+        
+        <div class="eighteen" id="southside">
+          <a href="southside19.com" class="link">
+            <img src="images/southside.png" alt="screenshot of southside project"
+            />
+          </a>
+        </div>
+      </section>
+      
+      <!-- <script src="jquery-3.4.1.min.js"></script> -->
+      
+      <script src="script.js"></script>
+    </main>
+    <!-- <footer-component></footer-component> -->
+  </body>
+  </html>
+  

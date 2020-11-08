@@ -28,22 +28,6 @@ two.addEventListener('mousemove', function(event) {
 
 
 // a
-
-// $(document).ready(function(){
-//   if($( window ).width() < 767){
-//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/6odzDWHs1' style='border:none'></iframe>");
-//   }else{
-//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/FMkbQhd2g'></iframe>");
-//   }
-// });
-// $( window ).resize(function() {
-//  if($( window ).width() < 767){
-//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/6odzDWHs1' style='border:none'></iframe>");
-//   }else{
-//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/FMkbQhd2g'></iframe>");
-//   }
-// });
-
 let mql = window.matchMedia('(max-width: 600px)');
 const eight = document.querySelector('.eight');
 const iframe = document.createElement('iframe');
@@ -156,41 +140,8 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   // banner
   $(document).on('scroll', function() {
     var pixels = $(document).scrollTop()
-    $('.banner').css('right', - 5 * pixels)
+    $('.banner').css('right', 250 - 0.5 * pixels)
   })
-  
-  
-  
-  // // // good morning
-  // function setup(){
-  //   createCanvas (200, 100)
-  //   graphic2 = createGraphics(200, 100)
-  
-  //   graphic2.fill("#004d9d")
-  //   graphic2.textSize(16)
-  //   graphic2.textAlign(CENTER, CENTER)
-  //   graphic2.textLeading(200)
-  //   graphic2.textFont(font)
-  //   graphic2.text("Good\nMorning", 100, 50)
-  
-  //   const container2 = document.querySelector('.twelve');
-  
-  //   const canvas2 = document.getElementById('defaultCanvas1');
-  //   container2.appendChild(canvas2);
-  // }
-  
-  // function draw(){
-  //   background("#e23f12")
-  
-  //   const tileSize = 10
-  //   for (let x = 0; x < 20; x = x + 1) {
-  //     for (let y = 0 ; y < 10; y = y + 1) {
-  
-  //     }
-  //   }
-  //   image(graphic2, frameCount, 0, 200, 100)
-  // }
-  
   
   // letters
   const letterBox = document.querySelector('.nine');
@@ -258,25 +209,25 @@ document.querySelector("textarea").addEventListener("keyup", function(){
     
     'I’m a digital creative and Frontend Developer..',
     'I’m a digital creative and Frontend Developer based in Stockholm.',
-    'I’m a digital creative and Frontend Developer based in Stockholm. I\m a disguised nerd..',
-    'I’m a digital creative and Frontend Developer based in Stockholm. I\m a nerd. So, I had to learn code.',
-    'I’m a digital creative and Frontend Developer based in Stockholm. I\m a nerd. So, I had to learn code. I started self-studying web design and code in the spring of 2020.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I’m a disguised nerd..',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I’m a nerd. So, I had to learn code.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I’m a nerd. So, I had to learn code. I started self-studying web design and code in the spring of 2020.',
     
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019.',
     
-    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island.',
     
-    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of web design and graphic design.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of web design and graphic design.',
     
-    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction.',
     
-    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I come from the field of urban planning and architecture.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I come from the field of urban planning and architecture.',
     
-    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture.',
     
-    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity are key for qualitative and sustainable design.',
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity are key for qualitative and sustainable design.',
     
-    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I\m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity, throughout the process, are key for qualitative design, leading to both business growth, societal prosperity and indivudual growth.'
+    'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity, throughout the process, are key for qualitative design, leading to both business growth, societal prosperity and indivudual growth.'
   ]
   $("input").on("input", function (){
     let value = $(this).val()
