@@ -26,6 +26,41 @@ two.addEventListener('mousemove', function(event) {
   book.style.transform = 'rotateX(' + (midY * 0.5) + 'deg)rotateY(' + midX + 'deg)';
 })
 
+
+// a
+
+// $(document).ready(function(){
+//   if($( window ).width() < 767){
+//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/6odzDWHs1' style='border:none'></iframe>");
+//   }else{
+//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/FMkbQhd2g'></iframe>");
+//   }
+// });
+// $( window ).resize(function() {
+//  if($( window ).width() < 767){
+//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/6odzDWHs1' style='border:none'></iframe>");
+//   }else{
+//       $("eight").html("<iframe src='https://editor.p5js.org/LisaLee/embed/FMkbQhd2g'></iframe>");
+//   }
+// });
+
+let mql = window.matchMedia('(max-width: 600px)');
+const eight = document.querySelector('.eight');
+const iframe = document.createElement('iframe');
+iframe.style.border = "none";
+eight.appendChild(iframe);
+mql.addEventListener( "change", (e) => {
+
+  if (e.matches) {
+    /* the viewport is 600 pixels wide or less */
+    iframe.src = "https://editor.p5js.org/LisaLee/embed/6odzDWHs1";
+    iframe.style.height = "150px";
+  } else {
+    iframe.style.height = "300px";
+    iframe.src = "https://editor.p5js.org/LisaLee/embed/FMkbQhd2g";
+  }
+});
+
 // 
 // // a 
 // let font1, font2;
@@ -117,6 +152,14 @@ document.querySelector("textarea").addEventListener("keyup", function(){
       typing.innerHTML = "start typing"
     }
   })
+  
+  // banner
+  $(document).on('scroll', function() {
+    var pixels = $(document).scrollTop()
+    $('.banner').css('right', - 5 * pixels)
+  })
+  
+  
   
   // // // good morning
   // function setup(){

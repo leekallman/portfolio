@@ -12,11 +12,9 @@ body{
     
 }
 h1{
-    font-size: 67px;
-    line-height: 0.8;
-    letter-spacing: -5px;
-    margin-bottom: 0.25rem;
-    transition: 0.5s;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -2px;
 }
 .selected-works{
     display: grid;
@@ -46,6 +44,7 @@ img{
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
     transform: scale(1.02);
+    opacity: 0.9;
 }
 .zero{
     grid-column: 1/2;
@@ -90,6 +89,7 @@ img{
     grid-column: 1/3;
     grid-row:6;
     background-color: #000;
+    position: relative;
 
 }
 .nine{
@@ -99,7 +99,8 @@ img{
 .ten{
     grid-column: 1/3;
     grid-row:7;
-    background-color:#73C4D8 ;
+    background-color:#73C4D8;
+    position: relative;
 }
 .eleven{
     grid-column: 3/5;
@@ -125,6 +126,7 @@ img{
     grid-column: 1/5;
     grid-row:11;
     background-color: #4CF5B4;
+    position: relative;
 }
 .seventeen{
     grid-column: 1/5;
@@ -221,16 +223,26 @@ div.face-back{
 
 
 /* a */
-.eight{
-    position: relative;
-}
-
 iframe{
     position: absolute;
     top: 50%;
     left:50%;
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+}
+
+/* banner */
+.ten {
+    position: relative;
+}
+
+.banner{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    background-image:  url(images/Goodmorning.svg);
+    background-size: cover;
 }
 
 
@@ -269,7 +281,7 @@ textarea{
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
     text-align: center;
-    min-height: 4vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,7 +292,7 @@ textarea{
     background-color: #fff;
     color: #000;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
 
 
@@ -365,7 +377,20 @@ input[type=range]::-ms-track {
     border-color: transparent;
     color: transparent;
 }
+@media screen and (min-width: 400px){
+    h1{
+        padding-right:2rem;
+    }
 
+
+
+@media screen and (min-width: 600px){
+h1{
+    font-size: 67px;
+    line-height: 0.8;
+    letter-spacing: -5px;
+}
+}
 
 
 @media screen and (min-width: 800px){
