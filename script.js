@@ -9,7 +9,18 @@
 //     document.getElementById('logo').style.fontSize = '67px';
 //   }
 // }
-
+// videos
+const vid = document.getElementsByTagName("video");
+[].forEach.call(vid, function (item) {
+  item.addEventListener('mouseover', hoverVideo, false);
+  item.addEventListener('mouseout', hideVideo, false); });
+  
+  function hoverVideo(e){
+  this.play();
+  }
+  function hideVideo(e){
+  this.pause();
+  }
 
 // book
 const five = document.querySelector('.five');

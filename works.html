@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <link rel="stylesheet" href="style.css" />
+
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans:400"
   rel="stylesheet"/>
@@ -14,19 +14,18 @@
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
   integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-  crossorigin="anonymous" />
+  crossorigin="anonymous"/>
   
   <!-- libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script> -->
   <script src="p5.min.js"></script>
   
-  <title>Lisa Lee - Selected works</title>
+  <title>Lisa Lee - Portfolio</title>
 </head>
 <body>
   <main>
     <section class="selected-works">
-      
       <div class="zero">
         <img src="images/rectangle.svg" alt="magneta rectangle">
       </div>
@@ -48,7 +47,12 @@
       </div>
       
       <div class="four">
-        <a href="tortmagazine.com" class="link"><img src="images/tort.png" alt=""/></a>
+        <a href="tortmagazine.com" class="link">
+          <!-- <img class="fade" src="images/tort.png" alt="screenshot of tort website"> -->
+          <video id="video" class="fade" loop preload="none" src="videos/test.mov" type="video/mp4" width=100%>
+          Your browser does not support the video tag.
+          </video>
+        </a>
       </div>
       
       <div class="five" id="book">
@@ -63,7 +67,7 @@
       </div>
       
       <div class="six" id="wrapping text">
-        <img src="images/text.png" alt="" />
+        <img src="images/blm.png" alt=""/>
       </div>
       
       <div class="seven">
@@ -87,32 +91,32 @@
       
       <div class="eleven" id="canvas">
         <a href="http://canvas-magazine-29.superhi.com/" class="link">
-          <img
-          src="images/canvas.png"
-          alt="screenshot of canvas website"
-          />
+          <video id="video" class="fade" loop preload="none" src="videos/canvas.mov" type="video/mp4" width=100%>
+            Your browser does not support the video tag.
+            </video>
         </a>
       </div>
       
       <div class="twelve" id="vimmerby">
         <a href="http://vimmerbystugby.se/" class="link">
-          <img
-          src="images/vimmerbystugby.png"
-          alt="illustration of vimmerby stugby"
-          />
+          <video id="video" class="fade" loop preload="none" src="videos/vimmerby.mov" type="video/mp4" width=100%>
+            Your browser does not support the video tag.
+            </video>
         </a>
       </div>
       
       <div class="thirteen" id="wanderers">
         <a href="https://wanderers-28.superhi.com/" class="link">
-          <img src="images/wanderers.png" alt="screenshot of wanderers project"
-          />
+          <video id="video" class="fade" loop preload="none" src="videos/wanderers.mov" type="video/mp4" width=100% height=102%>
+            Your browser does not support the video tag.
+            </video>
         </a>
       </div>
       <div class="fourteen" id="asiansquat">
         <a href="https://leekallman.github.io/asiansquat/" class="link">
-          <img src="images/asiansquat.png" alt="screenshot of asian squat project"
-          />
+          <video id="video" class="fade" loop preload="none" src="videos/asiansquat.mov" type="video/mp4" height=102% width=100%>
+            Your browser does not support the video tag.
+            </video>        
         </a>
       </div>
       
@@ -140,25 +144,23 @@
         
         <div class="seventeen">
           <a href="https://leekallman.github.io/tortmagazine-v1/" class="link">
-            <img src="images/tort-v1.png" alt="screenshot of first draft tort website"
-            />
+            <video id="video" class="fade" loop preload="none" src="videos/tort-v1.mov" type="video/mp4" height=100% width=100%>
+              Your browser does not support the video tag.
+              </video>
           </a>
           
         </div>
         
         <div class="eighteen" id="southside">
-          <a href="southside19.com" class="link">
-            <img src="images/southside.png" alt="screenshot of southside project"
-            />
+          <a href="http://southside19.com/" class="link">
+            <video id="video" class="fade" loop preload="none" src="videos/southside.mov" type="video/mp4" width=100%>
+            Your browser does not support the video tag.
+            </video>
           </a>
         </div>
-      </section>
-      
-      <!-- <script src="jquery-3.4.1.min.js"></script> -->
-      
+      </section>  
       <script src="script.js"></script>
     </main>
-    <!-- <footer-component></footer-component> -->
   </body>
   </html>
   

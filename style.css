@@ -29,6 +29,11 @@ img{
     width: 100%;
 }
 
+video{
+    border:none;
+}
+
+
 /* SELECTED WORKS */
 .link{
     display: block;
@@ -40,16 +45,15 @@ img{
     -ms-transition: all .3s ease-in-out;
     
 }
-.selected-works a:hover{
+/* .selected-works a:hover{
     -webkit-transform: scale(1.005);
     -moz-transform: scale(1.005);
     -o-transform: scale(1.005);
     transform: scale(1.005);
-    /* opacity: 0.9; */
+    opacity: 0.9;
     box-shadow: 5px 0 5px rgba(33,33,33,.2); 
-    z-index: 10;
-
-}
+    z-index: 10; 
+} */
 .zero{
     grid-column: 1/2;
     grid-row:1;
@@ -74,7 +78,10 @@ img{
 .four{
     grid-column: 1/5;
     grid-row:3;
+    background-image: url('images/tort.png');
+    background-size: cover;
 }
+
 .five{
     grid-column: 1/2;
     grid-row:4;
@@ -83,6 +90,7 @@ img{
 .six{
     grid-column: 2/5;
     grid-row:4;
+    min-height:200px;
     
 }
 .seven{
@@ -109,18 +117,26 @@ img{
 .eleven{
     grid-column: 3/5;
     grid-row:7;
+    background-image: url('images/canvas.png');
+    background-size: cover;
 }
 .twelve{
     grid-column: 1/3;
     grid-row:8;
+    background-image: url('images/vimmerbystugby.png');
+    background-size: cover;
 }
 .thirteen{
     grid-column: 3/5;
     grid-row:8;
+    background-image: url('images/wanderers.png');
+    background-size: cover;
 }
 .fourteen{
     grid-column: 1/5;
     grid-row:9;
+    background-image: url('images/asiansquat.png');
+    background-size: cover;
 }
 .fifthteen{
     grid-column: 1/5;
@@ -135,11 +151,16 @@ img{
 .seventeen{
     grid-column: 1/5;
     grid-row:12;
+    background-image: url('images/tort-v1.png');
+    background-size: cover;
+    
 }
 
 .eighteen{
     grid-column: 1/5;
     grid-row:13;
+    background-image: url('images/southside.png');
+    background-size: cover;
 }
 
 /* book */
@@ -203,57 +224,6 @@ div.face-bottom{
     background-image: url(images/bottom.svg);
     transform: translateX(-50%) translateY(-50%)rotateX(-90deg)rotateY(180deg)translateZ(50px);
 }
-
-
-
-
-/* div.face {
-    position: absolute;
-    top:0;
-    left:0;
-    background-size: cover;
-}
-div.face-cover{
-    width:65px;
-    height:100px;
-    background-image: url(images/front.svg);
-    transform: translateX(-50%) translateY(-50%) translateZ(5px);
-}
-div.face-side{
-    width:100px;
-    height:10px;
-    
-    background-image: url(images/side.svg);
-    transform: translateX(-50%) translateY(-50%) rotateX(-90deg)rotateY(90deg)translateZ(32.5px);
-}
-div.face-spine{
-    width:10px;
-    height:100px;
-    
-    background-image: url(images/spine.svg);
-    transform: translateX(-50%) translateY(-50%)rotateY(-90deg)translateZ(32.5px);
-}
-div.face-top{
-    width:65px;
-    height:10px;
-    background-image: url(images/top.svg);
-    transform: translateX(-50%) translateY(-50%) rotateX(90deg)translateZ(50px);
-}
-div.face-bottom{
-    width:65px;
-    height:10px;
-    
-    background-image: url(images/bottom.svg);
-    transform: translateX(-50%) translateY(-50%)rotateX(-90deg)translateZ(50px);
-}
-div.face-back{
-    width:65px;
-    height:100px;
-    
-    background-image: url(images/back.svg);
-    transform: translateX(-50%) translateY(-50%)rotateY(180deg)translateZ(5px);
-} */
-
 
 /* playground */
 @font-face {
@@ -511,28 +481,28 @@ h1{
         grid-row:5;
     }
     .eleven{
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row:6;
     }
     .twelve{
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row:7;
     }
     .thirteen{
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row:8;
     }
     .fourteen{
-        grid-column: 3/10;
+        grid-column: 4/12;
         grid-row:6/9;
     }
     
     .fifthteen{
-        grid-column: 10/13;
+        grid-column: 12/13;
         grid-row:6/8;
     }
     .sixteen{
-        grid-column: 10/13;
+        grid-column: 12/13;
         grid-row:8;
     }
     .seventeen{
