@@ -1,14 +1,12 @@
+document.body.classList.add('js-loading');
 
-// // resize header
-// window.onscroll = function() {scrollFunction()};
+window.addEventListener("load", showPage);
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-//     document.getElementById('logo').style.fontSize = '30px';
-//   } else {
-//     document.getElementById('logo').style.fontSize = '67px';
-//   }
-// }
+function showPage() {
+  document.body.classList.remove('js-loading');
+}
+
+
 // videos
 const vid = document.getElementsByTagName("video");
 [].forEach.call(vid, function (item) {
@@ -17,6 +15,7 @@ const vid = document.getElementsByTagName("video");
   
   function hoverVideo(e){
   this.play();
+  // this.parentElement.parentElement.style.backgroundImage ="none";
   }
   function hideVideo(e){
   this.pause();
@@ -38,73 +37,114 @@ five.addEventListener('mousemove', function(event) {
 })
 
 
-// a
-let mql = window.matchMedia('(max-width: 600px)');
+// // a
+// let mql = window.matchMedia('(max-width: 600px)');
+// const eight = document.querySelector('.eight');
+// const iframe = document.createElement('iframe');
+// iframe.style.border = "none";
+// eight.appendChild(iframe);
+// mql.addEventListener( "change", (e) => {
+
+//   if (e.matches) {
+//     /* the viewport is 600 pixels wide or less */
+//     iframe.src = "https://editor.p5js.org/LisaLee/embed/6odzDWHs1";
+//     iframe.style.height = "150px";
+//   } else {
+//     iframe.style.height = "300px";
+//     iframe.src = "https://editor.p5js.org/LisaLee/embed/FMkbQhd2g";
+//   }
+// });
+ 
+// a 
 const eight = document.querySelector('.eight');
-const iframe = document.createElement('iframe');
-iframe.style.border = "none";
-eight.appendChild(iframe);
-mql.addEventListener( "change", (e) => {
 
-  if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    iframe.src = "https://editor.p5js.org/LisaLee/embed/6odzDWHs1";
-    iframe.style.height = "150px";
-  } else {
-    iframe.style.height = "300px";
-    iframe.src = "https://editor.p5js.org/LisaLee/embed/FMkbQhd2g";
+let font;
+let graphic;
+let w = eight.offsetWidth;
+let h = eight.offsetHeight;
+console.log(h);
+
+function preload() {
+    font = loadFont('fonts/spacegrotesk-medium.otf')
+}
+
+function setup() {
+  createCanvas(w-20, h-40)
+
+  graphic = createGraphics(w, h)
+  graphic.fill('#fff')
+  graphic.textFont(font)
+  graphic.textAlign(CENTER, CENTER)
+  graphic.textSize(w)
+  graphic.text('a', w/2, h/2-30)
+
+  // const a = document.querySelector('.a');
+  const canvas = document.querySelector('.p5Canvas');
+  eight.append(canvas);
+}
+
+function draw() {
+  background("#000")
+  const tileSize = 50
+  for (let x = 0; x < 12; x = x + 1) {
+    for (let y = 0; y < 12; y = y + 1) {
+      
+      const distortion = sin(frameCount * 0.05 + x * 0.5 + y * 0.3) * 50
+      //source
+      const sx = x * tileSize + distortion
+      const sy = y * tileSize
+      const sw = tileSize
+      const sh = tileSize
+      
+      
+      //destination
+      const dx =  x * tileSize
+      const dy = y * tileSize
+      const dw = tileSize
+      const dh = tileSize
+      image(graphic,dx, dy, dw, dh, sx, sy, sw, sh)
+    }
   }
-});
+}
 
-// 
-// // a 
-// let font1, font2;
-// let graphic;
+// play
+// let graphic2
+// let graphic3
 
-// function preload() {
-//     font1 = loadFont('fonts/drake-neue.ttf')
-//     // font2 = loadFont('fonts/inter-var.woff2')
-//     console.log(font1)
+// function setup() {
+//   // canvas2 = createCanvas(250, 250)
+
+//   graphic2 = createGraphics(250, 250)
+
+//   graphic2.fill('#ff61b2')
+//   graphic2.textFont(font)
+//   graphic2.textSize(50)
+//   graphic2.textAlign(CENTER, CENTER)
+//   graphic2.text('play', width / 2, height / 2)
+
+//   graphic3 = createGraphics(250, 250)
+
+//   graphic3.fill('#ff61b2')
+//   graphic3.textFont(font)
+//   graphic3.textSize(50)
+//   graphic3.textAlign(CENTER, CENTER)
+//   graphic3.text('play', width / 2, height / 2)
+
+
+//   const play = document.querySelector('.play');
+//   const canvas = document.querySelector('.p5Canvas');
+//   play.append(canvas);
 // }
 
+// function draw() {
+//   background('#ffb93c')
 
-// const sketch01 = function (graphic) {
-//     graphic.setup = function() {
-//         graphic.createCanvas(200, 200, graphic.WEBGL);
+//   let val = sin(frameCount * 0.02) * 250
 
-//         graphic.fill('#fff')
-//         graphic.textFont('helvetica')
-//         // graphic.textAlign(CENTER, CENTER)
-//         graphic.textSize(200)
-//         graphic.text('a', 100, 100)
-//     }
-//     // const container = document.querySelector('.eight');
-
-//     // const canvas1 = document.getElementById('defaultCanvas0');
-//     // container.appendChild(canvas1);//not working
-
-//     graphic.draw = function() {
-//         graphic.background("#000")
-//         const tileSize = 25
-//         for (let x = 0; x < 12; x = x + 1) {
-//             for (let y = 0; y < 12; y = y + 1) {
-//                 const distortion = sin(frameCount * 0.05 + x * 0.5 + y * 0.3) * 25
-//                 //source
-//                 const sx = x * tileSize + distortion
-//                 const sy = y * tileSize
-//                 const sw = tileSize
-//                 const sh = tileSize
-
-//                 //destination
-//                 const dx =  x * tileSize
-//                 const dy = y * tileSize
-//                 const dw = tileSize
-//                 const dh = tileSize
-//                 image(graphic,dx, dy, dw, dh, sx, sy, sw, sh)
-//             }
-//         }
-//     }
+//   copy(graphic2, 0, 0, 500, 500, 0, 0, 250 + val, 500)
+//   copy(graphic3, 0, 0, 500, 500, 250 + val, 0, 250 - val, 500)
 // }
+
 // // good morning - canvas2
 // const sketch02 = function (graphic) {
 //     graphic.setup = function(){
@@ -156,7 +196,7 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   
   // letters
   const letterBox = document.querySelector('.nine');
-  const letters = ['F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y']
+  const letters = ['F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y']
   
   for (let i = 0; i < letters.length; i++){
     const letter = document.createElement("div");

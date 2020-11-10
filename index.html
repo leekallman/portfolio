@@ -1,104 +1,167 @@
 <!DOCTYPE html>
-<html lang="en" http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://leekallman.github.io/portfolio/">
-    <meta property="og:title" content="Lisa Lee - Frontend Developer">
-    <meta property="og:description" content="personal portfolio">
-    <meta property="og:image" content="https://leekallman.github.io/portfolio/images/lisalee.jpg">
-    <meta property="og:image:type" content="image/jpg">
-    <meta property="og:image:alt" content="photo of Lisa Lee">
-    <meta property="og:site_name" content="leekallman">
-    <link rel="stylesheet" href="style-v1.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans:400"
-    rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans:400"
+  rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
+  rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+  crossorigin="anonymous"/>
+  
+  <!-- libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script src="js/p5.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <!-- js components -->
-    <script src="components/header.js" type="text/javascript" defer></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  
+  <title>Lisa Lee - Portfolio</title>
 </head>
-    <title>Lisa Lee - Frontend Developer</title>
-</head>
-<body>
-    <header-component></header-component>
-    <!-- <header class="m-b" id="header">
-        <h1 class="t-u p-n">Hello,<br>Anyong<br>I'm Lisa Lee</h1>
-        <hr class="line">
-    </header> -->
-    <main>
-        <section class="who">
-            <img src="images/lisalee.jpg" alt="portrait of Lisa Lee" class="p-n" />
-            <div class="who-info">
-                <h2 class="t-u p-n">Who I am</h2>
-                <hr class="line">
-                <p class="p-n">I’m a digital creative and frontend developer based in Stockholm.</p>
-                <p class="p-n">I started self-studying web design and code in the spring of 2019, 
-                    currently I'm studying Frontend Developer at Hyper Island.</p>
-
-                <p class="p-n">Responsive web design and Visual Development. I believe diversity and inclusion is key for long term and sustainable growth and XXX.</p>
-                </div>
-            </section>
-            <section class="what">
-                <div class="what-info">
-                    <h2 class="t-u p-n">What I do</h2>
-                    <hr class="line">
-                    <p class="p-n">
-                        I combine research, user flows, wireframing, prototyping,
-                        storytelling, and visual design & development to transform tricky
-                        problems into engaging solutions.</p> 
-                        
-                        <p class="p-n">With a background in Frontend
-                            Development, I understand the constraints of the web and am able to
-                            design and build around them effectively.
-                        </p>
-                    </div>
-                </section>
-                <section class="works">
-                    <div class="works-info">
-                        <a href="works.html" onclick="window.open('works.html', '_self')"><h2 class="t-u p-n">Selected works <br />2019-2020</h2></a>
-                        <hr class="line">
-                        <ul class="works-list p-n">
-                            <li>Tort Magazine</li>
-                            <li>Tort Magazine</li>
-                            <li>Tort Magazine</li>
-                            <li>Tort Magazine</li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="contact">
-                    <div class="contact-info">
-                        <h2 class="t-u p-n">Contact</h2>
-                        <hr class="line">
-                        <p class="p-n">
-                            I’ll be happy to answer any questions and pleased to meet over a
-                            online coffee. Drop me a line → 
-                            <br>
-                            <a href="mailto:lisa.lee.kallman@hyperisland.se">lisa.lee.kallman@hyperisland.se</a>
-                        </p>
-                        <p class="p-n">Stalk me on in, git, Ig</p>
-                        <div class="social p-n">
-                            <a href="https://www.linkedin.com/in/lisaleekallman/"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/leekallman"><i class="fab fa-github"></i></a>
-                            <a href="https://www.instagram.com/lisaleel/"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <script src="script.js"></script>
-
-            <template id="temp">
-                <h1 class="t-u p-n">Hello,<br>Anyong<br>I'm Lisa Lee</h1>
-                <hr class="line">
-            </template>
-            <!-- <footer-component></footer-component> -->
-        </body>
-        </html>
+<body id="barba-wrapper">
+  <main class="barba-container">
+    <section class="selected-works">
+      <div class="zero">
+        <img src="images/rectangle.svg" alt="magneta rectangle">
+      </div>
+      <div class="one">
+        <h1 class="intro">Lisa Lee is a digital creative and frontend developer.</h1>
+      </div>
+      <div class="two">
+        <div class="inner-container">
+          <p class="playground">My Playground</p>
+        </div>
+      </div>
+      
+      <div class="three" id="clock">
+        <div class="clock">
+          <div class="hand second"></div>
+          <div class="hand minute"></div>
+          <div class="hand hour"></div>
+        </div>
+      </div>
+      
+      <div class="four">
+        <a href="tortmagazine.com" class="link">
+          <video id="video" class="fade" loop preload="none" src="videos/test.mov" type="video/mp4" width=100%>
+          Your browser does not support the video tag.
+          </video>
+        </a>
+      </div>
+      
+      <div class="five" id="book">
+        <div class="book">
+          <div class="face face-cover"></div>
+          <div class="face face-spine"></div>
+          <div class="face face-back"></div>
+          <div class="face face-top"></div>
+          <div class="face face-side"></div>
+          <div class="face face-bottom"></div>
+        </div>  
+      </div>
+      
+      <div class="six" id="wrapping text">
+        <img src="images/blm.png" alt=""/>
+      </div>
+      
+      <div class="seven">
+        <h3>Who I am</h3>
+        <div class="phrase">
+          I’m a digital creative and Frontend Developer..
+        </div>
+        <input type="range" max=12 value=0>
+      </div>
+      
+      <div class="eight" id="a">
+        <!-- <iframe src="https://editor.p5js.org/LisaLee/embed/FMkbQhd2g" style="border:none"></iframe> -->
+      </div>
+      
+      <div class="nine" id="letters"></div>
+      
+      <div class="ten" id="good morning">
+        <div class="play">Good Morning</div>
+        <!-- <iframe src="https://editor.p5js.org/LisaLee/embed/SteA8sE9r" style="border:none"></iframe> -->
+      </div>
+      
+      <div class="eleven" id="canvas">
+        <a href="http://canvas-magazine-29.superhi.com/" class="link">
+          <video id="video" class="fade" loop preload="none" src="videos/canvas.mov" type="video/mp4" width=100%>
+            Your browser does not support the video tag.
+            </video>
+        </a>
+      </div>
+      
+      <div class="twelve" id="vimmerby">
+        <a href="http://vimmerbystugby.se/" class="link">
+          <video id="video" class="fade" loop preload="none" src="videos/vimmerby.mov" type="video/mp4" width=100%>
+            Your browser does not support the video tag.
+            </video>
+        </a>
+      </div>
+      
+      <div class="thirteen" id="wanderers">
+        <a href="https://wanderers-28.superhi.com/" class="link">
+          <video id="video" class="fade" loop preload="none" src="videos/wanderers.mov" type="video/mp4" width=100% height=102%>
+            Your browser does not support the video tag.
+            </video>
+        </a>
+      </div>
+      <div class="fourteen" id="asiansquat">
+        <a href="https://leekallman.github.io/asiansquat/" class="link">
+          <video id="video" class="fade" loop preload="none" src="videos/asiansquat.mov" type="video/mp4" height=102% width=100%>
+            Your browser does not support the video tag.
+            </video>        
+        </a>
+      </div>
+      
+      <div class="fifthteen" id="contact">
+        <h3 class="contacts">Contact me</h3>
+        <p class="contacts">
+          I’ll be happy to answer any questions and pleased to meet over a online coffee. 
+          Drop me a line →</p>
+          <a href="mailto:lisa.lee.kallman@hyperisland.se">lisa.lee.kallman@hyperisland.se</a>
+          <br>
+          <br>
+          <p class="contacts">Stalk me on 
+            <div class="social">
+              <a href="https://www.linkedin.com/in/lisaleekallman/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/leekallman"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/lisaleel/"><i class="fab fa-instagram"></i></a>
+            </div>
+          </p>
+        </div>
         
+        <div class="sixteen">
+          <div class="typing">Type something here...</div>
+          <textarea></textarea>
+        </div>
+        
+        <div class="seventeen">
+          <a href="https://leekallman.github.io/tortmagazine-v1/" class="link">
+            <video id="video" class="fade" loop preload="none" src="videos/tort-v1.mov" type="video/mp4" height=100% width=100%>
+              Your browser does not support the video tag.
+              </video>
+          </a>
+          
+        </div>
+        
+        <div class="eighteen" id="southside">
+          <a href="http://southside19.com/" class="link">
+            <video id="video" class="fade" loop preload="none" src="videos/southside.mov" type="video/mp4" width=100%>
+            Your browser does not support the video tag.
+            </video>
+          </a>
+        </div>
+      </section>  
+      <script src="js/script.js"></script>
+
+
+    </main>
+  </body>
+  </html>
+  
