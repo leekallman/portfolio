@@ -318,11 +318,12 @@ div.face-bottom{
 }
 
 .twelve{
-    font-family: 'LexendGiga-Regular';
+    font-family: 'LexendGiga-Regular', sans-serif;
     font-style: italic;
     min-height: 150px;
     word-break: break-word;
     padding: 1rem;
+    position: relative;
 }
 textarea{
     position: absolute;
@@ -333,11 +334,11 @@ textarea{
 
 /* letters */
 @font-face {
-    font-family: NeueMachina-ultrabold;
+    font-family: NeueMachina-ultrabold, sans-serif;
     src: url(fonts/NeueMachina-ultrabold.otf);
 }
 .letter{
-    font-family: NeueMachina-ultrabold;
+    font-family: NeueMachina-ultrabold, sans-serif;
     text-align: center;
     
     display: flex;
@@ -397,7 +398,7 @@ textarea{
     position: relative;
     max-height: 75vh;
 }
-.seven h3{
+.seven h2{
     letter-spacing: 3px;
     font-size: 20px;
     margin: 1rem auto;
@@ -640,20 +641,20 @@ input[type=range]::-ms-fill-upper {
     color:#fff;
 }
 
-.fifthteen h3{
+.fifthteen h2{
     padding-bottom: 1rem;
 }
 .fifthteen a, .social a{
     text-decoration: none;
     color:#fff;
 }
-.social a:hover, p span:hover, h3 span:hover{
+.social a:hover, p span:hover, h2 span:hover{
     color:#ED74FA;
     transition: color 0s;
     transform: none;
     box-shadow: none;
 }
-.contacts a, .social a, p span, h3 span, .fifthteen a{
+.contacts a, .social a, p span, h2 span, .fifthteen a{
     transition: color 1s;
 }
 
@@ -671,18 +672,18 @@ input[type=range]::-ms-fill-upper {
     margin-right: 1rem;
     font-size: 30px;
 }
-.contacts a:nth-child(1n):hover, .social a:nth-child(1n):hover, h3 span:nth-child(1n):hover{
+.contacts a:nth-child(1n):hover, .social a:nth-child(1n):hover, h2 span:nth-child(1n):hover{
     color:#4CF5B4;
 }
 .contacts a:nth-child(2n):hover, .social a:nth-child(2n):hover, p span:nth-child(2n):hover, 
-h3 span:nth-child(2n):hover{
+h2 span:nth-child(2n):hover{
     color:#FFD850;
 }
 .contacts a:nth-child(3n):hover, .social a:nth-child(3n):hover, p span:nth-child(3n):hover, 
-h3 span:nth-child(3n):hover{
+h2 span:nth-child(3n):hover{
     color:#73C4D8;
 }
 .contacts a:nth-child(4n):hover, .social a:nth-child(4n):hover, p span:nth-child(4n):hover, 
-h3 span:nth-child(4n):hover{
+h2 span:nth-child(4n):hover{
     color:#ED74FA;
 }

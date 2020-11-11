@@ -2,12 +2,26 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://leekallman.github.io/portfolio/">
+  <meta property="og:title" content="Lisa Lee - Frontend Developer">
+  <meta property="og:description" content="personal portfolio">
+  <meta property="og:image" content="https://leekallman.github.io/portfolio/images/lisalee.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:alt" content="photo of Lisa Lee">
+  <meta property="og:site_name" content="leekallman">
+
+  <title>Lisa Lee - Portfolio</title>
+  
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="js/script.js" as="script">
+  <link rel="preload" href="js/canvas.js" as="script">
+  <link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="stylesheet" href="style.css" />
 
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans:400"
-  rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
   rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -18,11 +32,9 @@
   
   <!-- libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-  <script src="js/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
   <script src="js/fadein.js"></script>
 
-  
-  <title>Lisa Lee - Portfolio</title>
 </head>
 <body>
   <svg id="fader"></svg>
@@ -51,8 +63,8 @@
       </div>
       
       <div class="four">
-        <a href="tortmagazine.com" class="link">
-          <video id="video" class="fade" loop preload="none" src="videos/tort.mov" type="video/mp4" width=100%>
+        <a href="https://tortmagazine.com" class="link">
+          <video loop preload="none" src="videos/tort.mov" type="video/mp4" width=100%>
           Your browser does not support the video tag.
           </video>
         </a>
@@ -74,11 +86,11 @@
       </div>
       
       <div class="seven">
-        <h3>Who I am</h3>
+        <h2>Who I am</h2>
         <div class="phrase">
           I’m a digital creative and Frontend Developer..
         </div>
-        <input type="range" max=12 value=0></div>
+        <input type="range" max=12 value=0 aria-label="drag to read"></div>
       
       <div class="eight" id="eight"></div>
       
@@ -88,7 +100,7 @@
       
       <div class="eleven" id="canvas">
         <a href="http://canvas-magazine-29.superhi.com/" class="link">
-          <video id="video" loop preload="none" src="videos/canvas.mov" type="video/mp4" width=100% height=100%>
+          <video loop preload="none" src="videos/canvas.mov" type="video/mp4" width=100% height=100%>
             Your browser does not support the video tag.
           </video>
         </a>
@@ -96,19 +108,19 @@
       
       <div class="twelve" >
         <div class="typing">Type something here...</div>
-        <textarea></textarea>
+        <textarea type=""text" aria-label="type here"></textarea>
       </div>
       
       <div class="thirteen" id="wanderers">
         <a href="https://wanderers-28.superhi.com/" class="link">
-          <video id="video" loop preload="none" src="videos/wanderers.mov" type="video/mp4" width=100% height=100%>
+          <video loop preload="none" src="videos/wanderers.mov" type="video/mp4" width=100% height=100%>
             Your browser does not support the video tag.
             </video>
         </a>
       </div>
       <div class="fourteen" id="asiansquat">
         <a href="https://leekallman.github.io/asiansquat/" class="link">
-          <video id="video" loop preload="none" src="videos/asiansquat.mov" type="video/mp4" width=100% height=100%>
+          <video loop preload="none" src="videos/asiansquat.mov" type="video/mp4" width=100% height=100%>
             Your browser does not support the video tag.
             </video>        
         </a>
@@ -133,7 +145,7 @@
         
         <div class="sixteen" id="vimmerby">
           <a href="http://vimmerbystugby.se/" class="link">
-            <video id="video" loop preload="none" src="videos/vimmerby.mov" type="video/mp4" width=100% height=100%>
+            <video loop preload="none" src="videos/vimmerby.mov" type="video/mp4" width=100% height=100%>
               Your browser does not support the video tag.
               </video>
           </a>
@@ -141,7 +153,7 @@
         
         <div class="seventeen" id="seventeen">
           <a href="https://leekallman.github.io/tortmagazine-v1/" class="link">
-            <video id="video" loop preload="none" src="videos/tort-v1.mov" type="video/mp4" width=100%>
+            <video loop preload="none" src="videos/tort-v1.mov" type="video/mp4" width=100%>
               Your browser does not support the video tag.
               </video>
           </a>
@@ -149,7 +161,7 @@
         
         <div class="eighteen" id="southside">
           <a href="http://southside19.com/" class="link">
-            <video id="video" loop preload="none" src="videos/southside.mov" type="video/mp4" width=100%>
+            <video loop preload="none" src="videos/southside.mov" type="video/mp4" width=100%>
             Your browser does not support the video tag.
             </video>
           </a>
