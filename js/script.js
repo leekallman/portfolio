@@ -55,127 +55,7 @@ five.addEventListener('mousemove', function(event) {
 //   }
 // });
  
-// a 
-const eight = document.querySelector('.eight');
 
-let font;
-let graphic;
-let w = eight.offsetWidth;
-let h = eight.offsetHeight;
-console.log(h);
-
-function preload() {
-    font = loadFont('fonts/spacegrotesk-medium.otf')
-}
-
-function setup() {
-  createCanvas(w-20, h-40)
-
-  graphic = createGraphics(w, h)
-  graphic.fill('#fff')
-  graphic.textFont(font)
-  graphic.textAlign(CENTER, CENTER)
-  graphic.textSize(w)
-  graphic.text('a', w/2, h/2-30)
-
-  // const a = document.querySelector('.a');
-  const canvas = document.querySelector('.p5Canvas');
-  eight.append(canvas);
-}
-
-function draw() {
-  background("#000")
-  const tileSize = 50
-  for (let x = 0; x < 12; x = x + 1) {
-    for (let y = 0; y < 12; y = y + 1) {
-      
-      const distortion = sin(frameCount * 0.05 + x * 0.5 + y * 0.3) * 50
-      //source
-      const sx = x * tileSize + distortion
-      const sy = y * tileSize
-      const sw = tileSize
-      const sh = tileSize
-      
-      
-      //destination
-      const dx =  x * tileSize
-      const dy = y * tileSize
-      const dw = tileSize
-      const dh = tileSize
-      image(graphic,dx, dy, dw, dh, sx, sy, sw, sh)
-    }
-  }
-}
-
-// play
-// let graphic2
-// let graphic3
-
-// function setup() {
-//   // canvas2 = createCanvas(250, 250)
-
-//   graphic2 = createGraphics(250, 250)
-
-//   graphic2.fill('#ff61b2')
-//   graphic2.textFont(font)
-//   graphic2.textSize(50)
-//   graphic2.textAlign(CENTER, CENTER)
-//   graphic2.text('play', width / 2, height / 2)
-
-//   graphic3 = createGraphics(250, 250)
-
-//   graphic3.fill('#ff61b2')
-//   graphic3.textFont(font)
-//   graphic3.textSize(50)
-//   graphic3.textAlign(CENTER, CENTER)
-//   graphic3.text('play', width / 2, height / 2)
-
-
-//   const play = document.querySelector('.play');
-//   const canvas = document.querySelector('.p5Canvas');
-//   play.append(canvas);
-// }
-
-// function draw() {
-//   background('#ffb93c')
-
-//   let val = sin(frameCount * 0.02) * 250
-
-//   copy(graphic2, 0, 0, 500, 500, 0, 0, 250 + val, 500)
-//   copy(graphic3, 0, 0, 500, 500, 250 + val, 0, 250 - val, 500)
-// }
-
-// // good morning - canvas2
-// const sketch02 = function (graphic) {
-//     graphic.setup = function(){
-//         graphic.createCanvas(200, 100, graphic.WEBGL);
-
-//         graphic.fill("#004d9d")
-//         graphic.textSize(16)
-//         // graphic.textAlign(CENTER, CENTER)
-//         graphic.textLeading(200)
-//         graphic.textFont('helvetica')
-//         graphic.text("Good\nMorning", 100, 50)
-//     }
-//     // const container2 = document.querySelector('.twelve');
-
-//     //   const canvas2 = document.getElementById('defaultCanvas0');
-//     //   container.appendChild(canvas1);//not working
-
-//     graphic.draw = function() {
-//         graphic.background("#e23f12")
-
-//         const tileSize = 10
-//         for (let x = 0; x < 20; x = x + 1) {
-//             for (let y = 0 ; y < 10; y = y + 1) {  
-//             }
-//         }
-//         image(graphic, frameCount, 0, 200, 100)
-//     }
-// };
-
-// let canvas01 = new p5(sketch01, 'eight');
-// let canvas02 = new p5(sketch02, 'twelve');
 
 
 // typing
@@ -196,7 +76,11 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   
   // letters
   const letterBox = document.querySelector('.nine');
-  const letters = ['F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y']
+  const letters = ['F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 
+  'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 
+  'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 
+  'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y',
+  'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R']
   
   for (let i = 0; i < letters.length; i++){
     const letter = document.createElement("div");
@@ -217,12 +101,12 @@ document.querySelector("textarea").addEventListener("keyup", function(){
       const dy = div.offsetTop + 10 - y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       // distance(diagonal) is a^2 * b^2 = c^2
-      const score = Math.exp(dist * -0.009);
+      const score = Math.exp(dist * -0.01);
       // convert the distance to a "score" between 0 - 1 through an exponential-curve
       
       // div.innerHTML = score.toFixed(2)
       div.style.transform ="scale(" + score + ")";
-      div.style.fontWeight = 100 + (200 * Math.round(8 * score));
+      div.style.fontWeight = (200 * Math.round(8 * score));
     });
   });
   
@@ -309,14 +193,7 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   }
   
   // usage with single selector
-  makeSpans('.contacts')
+  makeSpans('.contacts');
   
-  // // or with multiple selectors
-  // makeSpans('h1, h2, .heading')
-  
-  
-  
-  
-  
-  
-  
+
+

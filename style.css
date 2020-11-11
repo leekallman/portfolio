@@ -26,7 +26,7 @@ h1{
 .selected-works{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px 5px;
+    /* gap: 5px 5px; */
 }
 
 p{
@@ -35,6 +35,10 @@ p{
 }
 img{
     width: 100%;
+}
+
+video{
+    object-fit: cover;
 }
 
 /* SELECTED WORKS */
@@ -73,7 +77,8 @@ img{
     grid-column: 1/5;
     grid-row:3;
     background-image: url('images/tort.png');
-    background-size: cover;
+    background-size: 100%;
+    object-fit: cover;
 }
 
 .five{
@@ -111,26 +116,32 @@ img{
 .eleven{
     grid-column: 3/5;
     grid-row:7;
-    background-image: url('images/canvas.png');
-    background-size: cover;
+    background-image: url('images/canvas2.png');
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 .twelve{
     grid-column: 1/3;
     grid-row:8;
-    background-image: url('images/vimmerbystugby.png');
-    background-size: cover;
+    background-color: #4CF5B4;
+    position: relative;
 }
 .thirteen{
     grid-column: 3/5;
     grid-row:8;
     background-image: url('images/wanderers.png');
-    background-size: cover;
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 .fourteen{
     grid-column: 1/5;
     grid-row:9;
     background-image: url('images/asiansquat.png');
-    background-size: cover;
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 .fifthteen{
     grid-column: 1/5;
@@ -139,27 +150,32 @@ img{
 .sixteen{
     grid-column: 1/5;
     grid-row:11;
-    background-color: #4CF5B4;
-    position: relative;
+    background-image: url('images/vimmerbystugby2.png');
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
 }
 .seventeen{
     grid-column: 1/5;
     grid-row:12;
-    background-image: url('images/tort-v1.png');
-    background-size: cover;
-    
+    /* background-image: url('images/tort-v1.png');
+    background-size: 100%;
+    object-fit: cover;    */
 }
 
 .eighteen{
     grid-column: 1/5;
     grid-row:13;
     background-image: url('images/southside.png');
-    background-size: cover;
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 
 /* book */
 .five{
-    perspective: 3000px;
+    perspective: 1500px;
     min-height:200px;
 }
 .book {
@@ -192,11 +208,11 @@ div.face-back{
 }
 
 div.face-side{
-    width:100px;
-    height:10px;
+    width:10px;
+    height:100px;
     
     background-image: url(images/side.svg);
-    transform: translateX(-50%) translateY(-50%) rotateX(-90deg)rotateY(180deg)translateZ(32.5px);
+    transform: translateX(-50%) translateY(-50%)rotateY(0deg)translateZ(32.5px);
 }
 div.face-spine{
     width:10px;
@@ -206,17 +222,18 @@ div.face-spine{
     transform: translateX(-50%) translateY(-50%)rotateY(180deg)translateZ(32.5px);
 }
 div.face-top{
-    width:65px;
-    height:10px;
+    width:10px;
+    height:65px;
+    
     background-image: url(images/top.svg);
-    transform: translateX(-50%) translateY(-50%)rotateX(0deg)rotateY(180deg)translateZ(50px);
+    transform: translateX(-50%) translateY(-50%)rotateX(90deg)rotateY(180deg)translateZ(50px);
 }
 div.face-bottom{
-    width:65px;
-    height:10px;
+    width:10px;
+    height:65px;
     
     background-image: url(images/bottom.svg);
-    transform: translateX(-50%) translateY(-50%)rotateX(90deg)rotateY(180deg)translateZ(50px);
+    transform: translateX(-50%) translateY(-50%)rotateX(-90deg)rotateY(180deg)translateZ(50px);
 }
 
 /* playground */
@@ -231,34 +248,31 @@ div.face-bottom{
     }
     100% {
         font-variation-settings: "wght" 900, "slnt" -8;
-        letter-spacing: 45x;
+        letter-spacing: 5px;
     }
+}
+.inner-.two{
+    position: relative;
 }
 
 .playground{
     font-size: 1.5rem;
-    /* padding:1.5rem; */
     font-family: Inter var, sans-serif;
     transition: transform 2s;
     animation: animate-type 3s infinite alternate;
     color:white;
     position: absolute;
     top: 50%;
-    left:40%;
+    left:50%;
     transform: translateX(-50%) translateY(-50%);
 }
 
 
-
 /* a */
-.eight{
-    min-height: 300px;
-}
-.p5Canvas{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+canvas{
+    width:100%;
+    height:100%;
 }
 /* iframe{
     position: absolute;
@@ -268,32 +282,29 @@ div.face-bottom{
     transform: translateX(-50%) translateY(-50%);
 } */
 
-/* banner */
+/* let's connect */
 .ten {
+    background-color: #fff;
     position: relative;
-}
-
-.banner{
-    width:100%;
-    height:100%;
-    position: absolute;
-    top: 0;
-    background-image:  url(/images/finally.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
+    min-height: 200px;
 }
 
 
 /* typing */
-.sixteen{
-    font-family: 'Times New Roman', Times, serif;
+@font-face {
+    font-family: LexendGiga-Regular;
+    src: url(fonts/LexendGiga-Regular.ttf);
+}
+
+.twelve{
+    font-family: 'LexendGiga-Regular';
     font-style: italic;
-    font-size: 16px;
+    min-height: 150px;
     word-break: break-word;
     padding: 1rem;
 }
 textarea{
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -302,68 +313,71 @@ textarea{
 }
 
 /* letters */
+@font-face {
+    font-family: NeueMachina-ultrabold;
+    src: url(fonts/NeueMachina-ultrabold.otf);
+}
 .letter{
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-family: NeueMachina-ultrabold;
     text-align: center;
     
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:0.1rem;
+    padding:0.5rem;
 }
 .nine {
-    padding:0.4rem;
-    background-color: #FFD850;
-    color: #73C4D8;
+    padding:0.3rem;
+    background-color: #A388E7;
+    color: #fff;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(10, 1fr);
 }
-
 
 /* clock */
 .three {
     background-color: #73C4D8;
+    display: flex;
+    justify-content: center;
     padding:1rem 0;
 }
 .clock{
-    width: 100px;
-    height:100px;
+    
+    width: 80px;
+    height:80px;
     background-color: #FFD850;
     border-radius: 50px;
     position: relative;
     margin: auto;
-    
-    
 }
 .hand{
     position: absolute;
     width:3px;
     height:20px;
-    background-color: aquamarine;
+    background-color: #ea63ff;
     
-    bottom: 49px;
-    left:49px;
+    bottom: 40px;
+    left:40px;
     transform: rotate(90deg);
     transform-origin: 50% 100%;
     
 }
 .minute {
-    height: 37px;
+    height: 25px;
 }
 .second {
-    height: 45px;
+    height: 35px;
     width:1px;
     background-color:#000;
 }
 
-
 /* who I am */
 .seven{
-    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000;
     background-color: #ea63ff;
     position: relative;
-    /* height: 75vh; */
+    max-height: 75vh;
 }
 .seven h3{
     letter-spacing: 3px;
@@ -372,18 +386,14 @@ textarea{
     text-align: center;
 }
 .phrase {
-    margin:2rem 1rem;
-    /* position: absolute;
-    top: 15%;
-    left: 10%; */
+    margin:2rem auto 3rem auto;
     width: 80%;
     text-align: center;
-    font-size: 14px;
 }
 
 input{
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 25%;
     width: 50%; 
 }
@@ -391,12 +401,18 @@ input [type=range]{
     -webkit-appearance: none;
     background: transparent;
 }
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
+
+/* track */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #000000;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 1px solid #000000;
 }
-input[type=range]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
+
 input[type=range]::-ms-track {
     width: 100%;
     cursor: pointer;
@@ -404,21 +420,98 @@ input[type=range]::-ms-track {
     background: transparent; 
     border-color: transparent;
     color: transparent;
+    animation: 0.2s;
 }
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 13px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #000000;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* box-shadow: 0px 0px 2px #000000; */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; 
+    border: 1px solid #000000;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.5px;
+}
+
+/* thumb */
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 2px #000000;
+    border: 1px solid #000000;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 2px #000000;
+    border: 1px solid #000000;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+/* focus */
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+}
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF;
+}
+
+
+
+input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px #000000;
+}
+
 
 /* Good Morning */
 .ten{
     font-size:3rem;
 }
 
-@media screen and (min-width: 374px){
+@media screen and (min-width: 374px) and (max-width: 800px){
     .seven{
         max-height: 50vh;
     }
     .phrase {
         font-style: 16px;
     }
-
+    
 }
 
 @media screen and (min-width: 400px){
@@ -535,20 +628,27 @@ input[type=range]::-ms-track {
 /* contacts */
 .fifthteen{
     padding:1rem;
-    font-size: 0.8rem; 
+    font-size: 1rem;
 }
 .fifthteen a, .social a{
     text-decoration: none;
     color:black;
 }
-.fifthteen a:hover, .social a:hover, p span:hover, h3 span:hover{
+.social a:hover, p span:hover, h3 span:hover{
     color:#ED74FA;
     transition: color 0s;
     transform: none;
     box-shadow: none;
 }
-.contacts a, .social a, p span, h3 span{
+.contacts a, .social a, p span, h3 span, .fifthteen a{
     transition: color 1s;
+}
+
+.fifthteen a:hover{
+    color:#ED74FA;
+    transition: color 1s;
+    transform: none;
+    box-shadow: none;
 }
 .social{
     margin-top:0.5rem;
