@@ -14,65 +14,59 @@ const vid = document.getElementsByTagName("video");
   item.addEventListener('mouseout', hideVideo, false); });
   
   function hoverVideo(e){
-  this.play();
-  // this.parentElement.parentElement.style.backgroundImage ="none";
+    this.play();
+    // this.parentElement.parentElement.style.backgroundImage ="none";
   }
   function hideVideo(e){
-  this.pause();
+    this.pause();
   }
-
-// book
-const five = document.querySelector('.five');
-five.addEventListener('mousemove', function(event) {
-  const x = event.pageX;
-  const y = event.pageY;
-  const midX = x - window.innerWidth / 2;
-  const midY = y - window.innerHeight / 2;
   
-  const book = document.querySelector('.book')
-  book.style.left = x + 'px';
-  book.style.bottom = y + 'px';
+  // book
+  const five = document.querySelector('.five');
+  five.addEventListener('mousemove', function(event) {
+    const x = event.pageX;
+    const y = event.pageY;
+    const midX = x - window.innerWidth / 2;
+    const midY = y - window.innerHeight / 2;
+    
+    const book = document.querySelector('.book')
+    book.style.left = x + 'px';
+    book.style.bottom = y + 'px';
+    
+    book.style.transform = 'rotateX(' + midY + 'deg)rotateY(' + midX + 'deg)';
+  })
   
-  book.style.transform = 'rotateX(' + midY + 'deg)rotateY(' + midX + 'deg)';
-})
-
-
-// // a
-// let mql = window.matchMedia('(max-width: 600px)');
-// const eight = document.querySelector('.eight');
-// const iframe = document.createElement('iframe');
-// iframe.style.border = "none";
-// eight.appendChild(iframe);
-// mql.addEventListener( "change", (e) => {
-
-//   if (e.matches) {
-//     /* the viewport is 600 pixels wide or less */
-//     iframe.src = "https://editor.p5js.org/LisaLee/embed/6odzDWHs1";
-//     iframe.style.height = "150px";
-//   } else {
-//     iframe.style.height = "300px";
-//     iframe.src = "https://editor.p5js.org/LisaLee/embed/FMkbQhd2g";
-//   }
-// });
- 
-
-
-
-// typing
-document.querySelector("textarea").addEventListener("keyup", function(){
-  const typing = document.querySelector(".typing")
-  if(this.value !=""){
-    typing.innerHTML = this.value}
-    else {
+  
+  // // a
+  // let mql = window.matchMedia('(max-width: 600px)');
+  // const eight = document.querySelector('.eight');
+  // const iframe = document.createElement('iframe');
+  // iframe.style.border = "none";
+  // eight.appendChild(iframe);
+  // mql.addEventListener( "change", (e) => {
+  
+  //   if (e.matches) {
+  //     /* the viewport is 600 pixels wide or less */
+  //     iframe.src = "https://editor.p5js.org/LisaLee/embed/6odzDWHs1";
+  //     iframe.style.height = "150px";
+  //   } else {
+  //     iframe.style.height = "300px";
+  //     iframe.src = "https://editor.p5js.org/LisaLee/embed/FMkbQhd2g";
+  //   }
+  // });
+  
+  
+  
+  
+  // typing
+  document.querySelector("textarea").addEventListener("keyup", function() {
+    const typing = document.querySelector(".typing")
+    if(this.value !=""){
+      typing.innerHTML = this.value
+    } else {
       typing.innerHTML = "start typing"
-    }
-  })
-  
-  // banner
-  $(document).on('scroll', function() {
-    var pixels = $(document).scrollTop()
-    $('.banner').css('right', 250 - 0.5 * pixels)
-  })
+    };
+  });
   
   // letters
   const letterBox = document.querySelector('.nine');
@@ -88,9 +82,7 @@ document.querySelector("textarea").addEventListener("keyup", function(){
     letter.classList.add("letter");
     letterBox.appendChild(letter);
   }
-  
-  document.addEventListener("mousemove", function (event) {
-    
+  document.addEventListener("mousemove", function (event) { 
     const x = event.pageX;
     const y = event.pageY;
     
@@ -195,5 +187,6 @@ document.querySelector("textarea").addEventListener("keyup", function(){
   // usage with single selector
   makeSpans('.contacts');
   
-
-
+  
+  
+  

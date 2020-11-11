@@ -1,10 +1,4 @@
 
-// let oneresize;
-// window.onresize = function() {
-//     sketch01();
-// }
-
-
 window.addEventListener("resize", resizeCanvas, false);
 
 function resizeCanvas() {
@@ -12,7 +6,6 @@ function resizeCanvas() {
     mysketch01.height = eight.offsetHeight;
     mysketch02.width = ten.offsetWidth;
     mysketch02.height = ten.offsetHeight;
-    console.log(mysketch02.width, ten.offsetWidth);
 }
 
 // sketch01
@@ -24,15 +17,14 @@ var sketch01 = function (a) {
         let w = eight.offsetWidth;
         let h = eight.offsetHeight;
         a.createCanvas(w, h);
-        // a.background(0);
         
-        graphics = a.createGraphics(w, h)
-        graphics.fill('#fff')
-        graphics.textFont('futura')
-        graphics.textAlign(a.CENTER, a.CENTER)
-        graphics.textSize(200)
-        graphics.textSize(w)
-        graphics.text('a', w/2, h/2) 
+        graphics = a.createGraphics(w, h);
+        graphics.fill('#fff');
+        graphics.textFont('futura');
+        graphics.textAlign(a.CENTER, a.CENTER);
+        graphics.textSize(200);
+        graphics.textSize(w);
+        graphics.text('a', w/2, h/2) ;
     };
     
     a.draw = function() {
@@ -60,11 +52,45 @@ var sketch01 = function (a) {
 };
 var mysketch01 = new p5(sketch01, 'eight');
 
+// // sketch02 - rolling banner
+// const ten = document.querySelector('.ten');
+// let w1 = ten.offsetWidth;
+// let h1 = ten.offsetHeight;
+
+
+// var sketch02 = function (b) {    
+//     b.setup = function(){
+//         b.createCanvas(w1, h1);
+        
+//         graphics2 = b.createGraphics(w1, h1);
+//         graphics2.fill("#4CF5B4");
+//         graphics2.textSize(100);
+//         graphics2.textAlign(b.RIGHT, b.RIGHT);
+//         graphics2.textLeading(100);
+//         graphics2.textFont('futura');
+//         graphics2.text("Let's\nConnect", 500, 80);
+//     };
+    
+//     b.draw = function() {
+//         b.background("#fff");
+        
+//         b.tileSize = 10
+//         for (let x = 0; x < 20; x = x + 1) {
+//             for (let y = 0 ; y < 10; y = y + 1) {  
+//             };
+//         };
+//         b.image(graphics2, b.frameCount, 0, 500, 200)
+//     };
+// };
+// var mysketch02 = new p5(sketch02, 'ten');
+
 // sketch02
 const ten = document.querySelector('.ten');
 let w1 = ten.offsetWidth;
 let h1 = ten.offsetHeight;
 
+let graphics2;
+let graphics3;
 
 var sketch02 = function (b) {    
     b.setup = function(){
@@ -72,65 +98,39 @@ var sketch02 = function (b) {
         
         graphics2 = b.createGraphics(w1, h1);
         graphics2.fill("#4CF5B4");
-        graphics2.textSize(100);
-        graphics2.textAlign(b.RIGHT, b.RIGHT);
-        graphics2.textLeading(100);
+        graphics2.textSize(50);
+        graphics2.textAlign(b.CENTER, b.CENTER);
         graphics2.textFont('futura');
-        graphics2.text("Let's\nConnect", 500, 80);
+        graphics2.text("Connect", w1/2, h1/2);
+
+        graphics3 = b.createGraphics(w1, h1);
+        graphics3.fill("#4CF5B4");
+        graphics3.textSize(50);
+        graphics3.textAlign(b.CENTER, b.CENTER);
+        graphics3.textFont('futura');
+        graphics3.text("Connect", w1/2, h1/2);
     };
     
     b.draw = function() {
         b.background("#fff");
         
-        b.tileSize = 10
-        for (let x = 0; x < 20; x = x + 1) {
-            for (let y = 0 ; y < 10; y = y + 1) {  
-            };
-        };
-        b.image(graphics2, b.frameCount, 0, 500, 200)
+        let val = b.sin(b.frameCount * 0.02) * 200
+
+        b.copy(graphics2, 0, 0, 500, 250, 0, 0, 250 + val, 250)
+        b.copy(graphics3, 0, 0, 500, 250, 150 + val, 0, 250 - val, 250)
     };
 };
 var mysketch02 = new p5(sketch02, 'ten');
 
 
-// play
-// let graphic2
-// let graphic3
-
-// function setup() {
-//   // canvas2 = createCanvas(250, 250)
-
-//   graphic2 = createGraphics(250, 250)
-
-//   graphic2.fill('#ff61b2')
-//   graphic2.textFont(font)
-//   graphic2.textSize(50)
-//   graphic2.textAlign(CENTER, CENTER)
-//   graphic2.text('play', width / 2, height / 2)
-
-//   graphic3 = createGraphics(250, 250)
-
-//   graphic3.fill('#ff61b2')
-//   graphic3.textFont(font)
-//   graphic3.textSize(50)
-//   graphic3.textAlign(CENTER, CENTER)
-//   graphic3.text('play', width / 2, height / 2)
-
-
-//   const play = document.querySelector('.play');
-//   const canvas = document.querySelector('.p5Canvas');
-//   play.append(canvas);
-// }
-
-// function draw() {
-//   background('#ffb93c')
-
-//   let val = sin(frameCount * 0.02) * 250
-
-//   copy(graphic2, 0, 0, 500, 500, 0, 0, 250 + val, 500)
-//   copy(graphic3, 0, 0, 500, 500, 250 + val, 0, 250 - val, 500)
-// }
-
+// sx Integer: X coordinate of the source's upper left corner
+// sy Integer: Y coordinate of the source's upper left corner
+// sw Integer: source image width
+// sh Integer: source image height
+// dx Integer: X coordinate of the destination's upper left corner
+// dy Integer: Y coordinate of the destination's upper left corner
+// dw Integer: destination image width
+// dh Integer: destination image height
 
 // // sketch03
 // const seventeen = document.querySelector('.seventeen');
