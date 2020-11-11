@@ -98,26 +98,28 @@ var sketch02 = function (b) {
         
         graphics2 = b.createGraphics(w1, h1);
         graphics2.fill("#4CF5B4");
-        graphics2.textSize(50);
+        graphics2.textSize(100);
         graphics2.textAlign(b.CENTER, b.CENTER);
-        graphics2.textFont('futura');
+        graphics2.textFont('georgia');
+        graphics2.textStyle(b.BOLD); 
         graphics2.text("Connect", w1/2, h1/2);
 
         graphics3 = b.createGraphics(w1, h1);
         graphics3.fill("#4CF5B4");
-        graphics3.textSize(50);
+        graphics3.textSize(100);
         graphics3.textAlign(b.CENTER, b.CENTER);
-        graphics3.textFont('futura');
+        graphics3.textFont('georgia');
+        graphics3.textStyle(b.BOLD); 
         graphics3.text("Connect", w1/2, h1/2);
     };
     
     b.draw = function() {
-        b.background("#fff");
+        b.background("#73C4D8");
         
         let val = b.sin(b.frameCount * 0.02) * 200
 
         b.copy(graphics2, 0, 0, 500, 250, 0, 0, 250 + val, 250)
-        b.copy(graphics3, 0, 0, 500, 250, 150 + val, 0, 250 - val, 250)
+        b.copy(graphics3, 0, 0, 500, 250, 250 + val, 0, 250 - val, 250)
     };
 };
 var mysketch02 = new p5(sketch02, 'ten');

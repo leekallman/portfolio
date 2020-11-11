@@ -19,11 +19,16 @@
   <!-- libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <script src="js/p5.min.js"></script>
+  <script src="js/fadein.js"></script>
 
   
   <title>Lisa Lee - Portfolio</title>
 </head>
 <body>
+  <svg id="fader"></svg>
+  <script>
+    fadeInPage();
+</script>
   <main>
     <section class="selected-works">
       <div class="zero">
@@ -83,7 +88,7 @@
       
       <div class="eleven" id="canvas">
         <a href="http://canvas-magazine-29.superhi.com/" class="link">
-          <video id="video" class="fade" loop preload="none" src="videos/canvas.mov" type="video/mp4" width=100% height=100%>
+          <video id="video" loop preload="none" src="videos/canvas.mov" type="video/mp4" width=100% height=100%>
             Your browser does not support the video tag.
           </video>
         </a>
@@ -96,14 +101,14 @@
       
       <div class="thirteen" id="wanderers">
         <a href="https://wanderers-28.superhi.com/" class="link">
-          <video id="video" class="fade" loop preload="none" src="videos/wanderers.mov" type="video/mp4" width=100% height=100%>
+          <video id="video" loop preload="none" src="videos/wanderers.mov" type="video/mp4" width=100% height=100%>
             Your browser does not support the video tag.
             </video>
         </a>
       </div>
       <div class="fourteen" id="asiansquat">
         <a href="https://leekallman.github.io/asiansquat/" class="link">
-          <video id="video" class="fade" loop preload="none" src="videos/asiansquat.mov" type="video/mp4" width=100% height=100%>
+          <video id="video" loop preload="none" src="videos/asiansquat.mov" type="video/mp4" width=100% height=100%>
             Your browser does not support the video tag.
             </video>        
         </a>
@@ -128,7 +133,7 @@
         
         <div class="sixteen" id="vimmerby">
           <a href="http://vimmerbystugby.se/" class="link">
-            <video id="video" class="fade" loop preload="none" src="videos/vimmerby.mov" type="video/mp4" width=100% height=100%>
+            <video id="video" loop preload="none" src="videos/vimmerby.mov" type="video/mp4" width=100% height=100%>
               Your browser does not support the video tag.
               </video>
           </a>
@@ -136,16 +141,15 @@
         
         <div class="seventeen" id="seventeen">
           <a href="https://leekallman.github.io/tortmagazine-v1/" class="link">
-            <video id="video" class="fade" loop preload="none" src="videos/tort-v1.mov" type="video/mp4" height=100% width=100%>
+            <video id="video" loop preload="none" src="videos/tort-v1.mov" type="video/mp4" width=100%>
               Your browser does not support the video tag.
               </video>
           </a>
-          <canvas class="patterns"></canvas>
         </div>
         
         <div class="eighteen" id="southside">
           <a href="http://southside19.com/" class="link">
-            <video id="video" class="fade" loop preload="none" src="videos/southside.mov" type="video/mp4" width=100% height=100%>
+            <video id="video" loop preload="none" src="videos/southside.mov" type="video/mp4" width=100%>
             Your browser does not support the video tag.
             </video>
           </a>

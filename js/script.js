@@ -1,12 +1,3 @@
-document.body.classList.add('js-loading');
-
-window.addEventListener("load", showPage);
-
-function showPage() {
-  document.body.classList.remove('js-loading');
-}
-
-
 // videos
 const vid = document.getElementsByTagName("video");
 [].forEach.call(vid, function (item) {
@@ -16,6 +7,8 @@ const vid = document.getElementsByTagName("video");
   function hoverVideo(e){
     this.play();
     // this.parentElement.parentElement.style.backgroundImage ="none";
+    // this.parentElement.parentElement.style.background ="#73C4D8";
+
   }
   function hideVideo(e){
     this.pause();
@@ -97,7 +90,7 @@ const vid = document.getElementsByTagName("video");
       // convert the distance to a "score" between 0 - 1 through an exponential-curve
       
       // div.innerHTML = score.toFixed(2)
-      div.style.transform ="scale(" + score + ")";
+      div.style.transform ="scale(" + 2*score + ")";
       div.style.fontWeight = (200 * Math.round(8 * score));
     });
   });
@@ -123,11 +116,9 @@ const vid = document.getElementsByTagName("video");
     hourHand.style.transform = 'rotate(' + hourRotation + 'deg)';
     minHand.style.transform = 'rotate(' + minRotation + 'deg)';
     secHand.style.transform = 'rotate(' + secRotation + 'deg)';
-    
-    
+  
     requestAnimationFrame(runClock);
   }
-  
   runClock();
   
   
@@ -139,21 +130,13 @@ const vid = document.getElementsByTagName("video");
     'I’m a digital creative and Frontend Developer based in Stockholm. I’m a disguised nerd..',
     'I’m a digital creative and Frontend Developer based in Stockholm. I’m a nerd. So, I had to learn code.',
     'I’m a digital creative and Frontend Developer based in Stockholm. I’m a nerd. So, I had to learn code. I started self-studying web design and code in the spring of 2020.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of web design and graphic design.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I come from the field of urban planning and architecture.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity are key for qualitative and sustainable design.',
-    
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity, throughout the process, are key for qualitative design, leading to both business growth, societal prosperity and indivudual growth.'
   ]
   $("input").on("input", function (){
@@ -161,7 +144,6 @@ const vid = document.getElementsByTagName("video");
     let phrase = phrases[value]
     $("div.phrase").html(phrase)
   })
-  
   
   
   // contacts
