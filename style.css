@@ -13,12 +13,12 @@ html {
     animation-play-state: paused !important;
 }
 
-
 body{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
 }
 
+/* fade in */
 #fader {
     position: fixed;
     top: 0;
@@ -32,27 +32,23 @@ body{
     animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
 }
-
-
 @keyframes fade-out {
     from { opacity: 1 }
       to { opacity: 0 }
 }
-
 @keyframes fade-in {
     from { opacity: 0 }
       to { opacity: 1 }
 }
-
 #fader.fade-out {
     opacity: 0;
     animation-name: fade-out;
 }
-
 #fader.fade-in {
     opacity: 1;
     animation-name: fade-in;
 }
+
 
 h1{
     font-size: 36px;
@@ -62,7 +58,6 @@ h1{
 .selected-works{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 5px 5px; */
 }
 
 p{
@@ -77,7 +72,7 @@ video{
     object-fit: cover;
 }
 
-/* SELECTED WORKS */
+/* grid */
 .link{
     display: block;
     width:100%;
@@ -86,7 +81,6 @@ video{
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    
 }
 .zero{
     grid-column: 1/2;
@@ -116,7 +110,6 @@ video{
     background-size: 100%;
     object-fit: cover;
 }
-
 .five{
     grid-column: 1/5;
     grid-row:4;
@@ -125,8 +118,6 @@ video{
 .six{
     grid-column: 1/5;
     grid-row:5;
-    /* min-height:200px; */
-    
 }
 .seven{
     grid-column: 1/5;
@@ -243,7 +234,6 @@ div.face-back{
     background-image: url(images/back.svg);
     transform: translateX(-50%) translateY(-50%)rotateY(90deg)translateZ(5px);
 }
-
 div.face-side{
     width:10px;
     height:100px;
@@ -304,7 +294,7 @@ div.face-bottom{
     transform: translateX(-50%) translateY(-50%);
 }
 
-/* let's connect */
+/* connect */
 .ten {
     background-color: #73C4D8;
     min-height: 200px;
@@ -541,8 +531,7 @@ input[type=range]::-ms-fill-upper {
 
 @media screen and (min-width: 800px){
     .selected-works{
-        grid-template-columns: repeat(12, 1fr);
-        
+        grid-template-columns: repeat(12, 1fr);  
     }
     .zero{
         grid-column: 1/3;
@@ -609,6 +598,10 @@ input[type=range]::-ms-fill-upper {
     .fifthteen{
         grid-column: 12/13;
         grid-row:6/8;
+        
+    }
+    .fifthteen p, .fifthteen h2{
+        text-align:left;
     }
     .sixteen{
         grid-column: 12/13;
@@ -623,11 +616,14 @@ input[type=range]::-ms-fill-upper {
         grid-column: 8/13;
         grid-row:9;
     }
-    
-    
+
     .intro{
         max-width: 24rem;
         line-height: 1.1;
+    }
+    .social{
+        display: flex;
+        text-align: left;
     }
     
 }
@@ -639,6 +635,7 @@ input[type=range]::-ms-fill-upper {
     font-size: 0.9rem;
     background-color: #000;
     color:#fff;
+    text-align: center;
 }
 
 .fifthteen h2{
@@ -656,6 +653,7 @@ input[type=range]::-ms-fill-upper {
 }
 .contacts a, .social a, p span, h2 span, .fifthteen a{
     transition: color 1s;
+    
 }
 
 .fifthteen a:hover{
@@ -666,7 +664,7 @@ input[type=range]::-ms-fill-upper {
 }
 .social{
     margin-top:0.5rem;
-    display: flex;
+    text-align: center;
 }
 .social a{
     margin-right: 1rem;

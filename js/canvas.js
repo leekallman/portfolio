@@ -1,5 +1,4 @@
-
-window.addEventListener("resize", resizeCanvas, false);
+window.addEventListener('resize', resizeCanvas, false);
 
 function resizeCanvas() {
     mysketch01.width = eight.offsetWidth;
@@ -12,7 +11,7 @@ function resizeCanvas() {
 const eight = document.querySelector('.eight');
 
 var graphics;
-var sketch01 = function (a) {  
+var sketch01 = function(a) {  
     a.setup = function() {
         let w = eight.offsetWidth;
         let h = eight.offsetHeight;
@@ -24,7 +23,7 @@ var sketch01 = function (a) {
         graphics.textAlign(a.CENTER, a.CENTER);
         graphics.textSize(200);
         graphics.textSize(w);
-        graphics.text('a', w/2, h/2) ;
+        graphics.text('a', w/2, h/2);
     };
     
     a.draw = function() {
@@ -52,38 +51,6 @@ var sketch01 = function (a) {
 };
 var mysketch01 = new p5(sketch01, 'eight');
 
-// // sketch02 - rolling banner
-// const ten = document.querySelector('.ten');
-// let w1 = ten.offsetWidth;
-// let h1 = ten.offsetHeight;
-
-
-// var sketch02 = function (b) {    
-//     b.setup = function(){
-//         b.createCanvas(w1, h1);
-        
-//         graphics2 = b.createGraphics(w1, h1);
-//         graphics2.fill("#4CF5B4");
-//         graphics2.textSize(100);
-//         graphics2.textAlign(b.RIGHT, b.RIGHT);
-//         graphics2.textLeading(100);
-//         graphics2.textFont('futura');
-//         graphics2.text("Let's\nConnect", 500, 80);
-//     };
-    
-//     b.draw = function() {
-//         b.background("#fff");
-        
-//         b.tileSize = 10
-//         for (let x = 0; x < 20; x = x + 1) {
-//             for (let y = 0 ; y < 10; y = y + 1) {  
-//             };
-//         };
-//         b.image(graphics2, b.frameCount, 0, 500, 200)
-//     };
-// };
-// var mysketch02 = new p5(sketch02, 'ten');
-
 // sketch02
 const ten = document.querySelector('.ten');
 let w1 = ten.offsetWidth;
@@ -98,19 +65,19 @@ var sketch02 = function (b) {
         
         graphics2 = b.createGraphics(w1, h1);
         graphics2.fill("#4CF5B4");
-        graphics2.textSize(100);
+        graphics2.textSize(90);
         graphics2.textAlign(b.CENTER, b.CENTER);
         graphics2.textFont('georgia');
         graphics2.textStyle(b.BOLD); 
-        graphics2.text("Connect", w1/2, h1/2);
+        graphics2.text("SAY HI", w1/2, h1/2);
 
         graphics3 = b.createGraphics(w1, h1);
         graphics3.fill("#4CF5B4");
-        graphics3.textSize(100);
+        graphics3.textSize(90);
         graphics3.textAlign(b.CENTER, b.CENTER);
         graphics3.textFont('georgia');
         graphics3.textStyle(b.BOLD); 
-        graphics3.text("Connect", w1/2, h1/2);
+        graphics3.text("SAY HI", w1/2, h1/2);
     };
     
     b.draw = function() {
@@ -118,21 +85,11 @@ var sketch02 = function (b) {
         
         let val = b.sin(b.frameCount * 0.02) * 200
 
-        b.copy(graphics2, 0, 0, 500, 250, 0, 0, 250 + val, 250)
-        b.copy(graphics3, 0, 0, 500, 250, 250 + val, 0, 250 - val, 250)
+        b.copy(graphics2, -100, 0, 600, 250, 0, 0, 250 + val, 250)
+        b.copy(graphics3, 0, 0, 600, 250, 250 + val, 0, 250 - val, 250)
     };
 };
 var mysketch02 = new p5(sketch02, 'ten');
-
-
-// sx Integer: X coordinate of the source's upper left corner
-// sy Integer: Y coordinate of the source's upper left corner
-// sw Integer: source image width
-// sh Integer: source image height
-// dx Integer: X coordinate of the destination's upper left corner
-// dy Integer: Y coordinate of the destination's upper left corner
-// dw Integer: destination image width
-// dh Integer: destination image height
 
 // // sketch03
 // const seventeen = document.querySelector('.seventeen');
@@ -163,7 +120,6 @@ var mysketch02 = new p5(sketch02, 'ten');
 //     const image = document.createElement("img");
 //     image.src = src;
 //     return image;
-
 // });
 
 // document.addEventListener("mousemove", function(event) {
@@ -193,4 +149,3 @@ var mysketch02 = new p5(sketch02, 'ten');
 //     requestAnimationFrame(draw);
 // }; 
 // draw();
-

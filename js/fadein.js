@@ -19,14 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
           fader.removeEventListener('animationend', listener);
       };
       fader.addEventListener('animationend', listener);
-      
       event.preventDefault();
       fader.classList.add('fade-in');
         });
-    }
+    };
 });
 
-window.addEventListener('pageshow', function (event) {
+window.addEventListener('pageshow', function(event) {
   if (!event.persisted) {
     return;
   }

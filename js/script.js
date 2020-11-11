@@ -4,13 +4,12 @@ const vid = document.getElementsByTagName("video");
   item.addEventListener('mouseover', hoverVideo, false);
   item.addEventListener('mouseout', hideVideo, false); });
   
-  function hoverVideo(e){
+  function hoverVideo(e) {
     this.play();
     // this.parentElement.parentElement.style.backgroundImage ="none";
     // this.parentElement.parentElement.style.background ="#73C4D8";
-
   }
-  function hideVideo(e){
+  function hideVideo(e) {
     this.pause();
   }
   
@@ -27,29 +26,7 @@ const vid = document.getElementsByTagName("video");
     book.style.bottom = y + 'px';
     
     book.style.transform = 'rotateX(' + midY + 'deg)rotateY(' + midX + 'deg)';
-  })
-  
-  
-  // // a
-  // let mql = window.matchMedia('(max-width: 600px)');
-  // const eight = document.querySelector('.eight');
-  // const iframe = document.createElement('iframe');
-  // iframe.style.border = "none";
-  // eight.appendChild(iframe);
-  // mql.addEventListener( "change", (e) => {
-  
-  //   if (e.matches) {
-  //     /* the viewport is 600 pixels wide or less */
-  //     iframe.src = "https://editor.p5js.org/LisaLee/embed/6odzDWHs1";
-  //     iframe.style.height = "150px";
-  //   } else {
-  //     iframe.style.height = "300px";
-  //     iframe.src = "https://editor.p5js.org/LisaLee/embed/FMkbQhd2g";
-  //   }
-  // });
-  
-  
-  
+  });
   
   // typing
   document.querySelector("textarea").addEventListener("keyup", function() {
@@ -95,7 +72,6 @@ const vid = document.getElementsByTagName("video");
     });
   });
   
-  
   // clock
   function runClock() {
     let now = new Date();
@@ -118,13 +94,12 @@ const vid = document.getElementsByTagName("video");
     secHand.style.transform = 'rotate(' + secRotation + 'deg)';
   
     requestAnimationFrame(runClock);
-  }
+  };
   runClock();
   
   
   // who I am
   let phrases = [
-    
     'I’m a digital creative and Frontend Developer..',
     'I’m a digital creative and Frontend Developer based in Stockholm.',
     'I’m a digital creative and Frontend Developer based in Stockholm. I’m a disguised nerd..',
@@ -139,12 +114,11 @@ const vid = document.getElementsByTagName("video");
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity are key for qualitative and sustainable design.',
     'I’m a digital creative and Frontend Developer based in Stockholm. I started self-studying web design and code in the spring of 2019. Currently, I’m studying Frontend Developer at Hyper Island. I work in the fields of responsive web design, graphic design and art direction. I recently transitioned from the field of urban planning and sustainable architecture. I have a strong conviction that inclusion and diversity, throughout the process, are key for qualitative design, leading to both business growth, societal prosperity and indivudual growth.'
   ]
-  $("input").on("input", function (){
-    let value = $(this).val()
-    let phrase = phrases[value]
-    $("div.phrase").html(phrase)
-  })
-  
+  $("input").on("input", function() {
+    let value = $(this).val();
+    let phrase = phrases[value];
+    $("div.phrase").html(phrase);
+  });
   
   // contacts
   'use strict'
@@ -152,19 +126,19 @@ const vid = document.getElementsByTagName("video");
   // create spans for every letter in contacts div
   function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr) }
   
-  function makeSpans (selector) {
-    var _document$querySelect = document.querySelectorAll(selector)
-    var _document$querySelect2 = _toArray(_document$querySelect)
-    var elements = _document$querySelect2.slice(0)
+  function makeSpans(selector) {
+    var _document$querySelect = document.querySelectorAll(selector);
+    var _document$querySelect2 = _toArray(_document$querySelect);
+    var elements = _document$querySelect2.slice(0);
     
     return elements.map(function (element) {
-      var text = element.innerText.split('')
+      var text = element.innerText.split('');
       var spans = text.map(function (letter) {
         return '<span>' + letter + '</span>'
-      }).join('')
+      }).join('');
       return element.innerHTML = spans
-    })
-  }
+    });
+  };
   
   // usage with single selector
   makeSpans('.contacts');
