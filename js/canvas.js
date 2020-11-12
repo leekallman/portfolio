@@ -59,17 +59,17 @@ var sketch02 = function (b) {
         
         graphics2 = b.createGraphics(w1, h1);
         graphics2.fill("#4CF5B4");
-        graphics2.textSize(90);
+        graphics2.textSize(100);
         graphics2.textAlign(b.CENTER, b.CENTER);
-        graphics2.textFont('georgia');
+        graphics2.textFont('inter');
         graphics2.textStyle(b.BOLD); 
         graphics2.text("SAY HI", w1/2, h1/2);
 
         graphics3 = b.createGraphics(w1, h1);
         graphics3.fill("#4CF5B4");
-        graphics3.textSize(90);
+        graphics3.textSize(100);
         graphics3.textAlign(b.CENTER, b.CENTER);
-        graphics3.textFont('georgia');
+        graphics3.textFont('inter');
         graphics3.textStyle(b.BOLD); 
         graphics3.text("SAY HI", w1/2, h1/2);
     };

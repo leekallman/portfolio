@@ -151,7 +151,7 @@ video{
 .twelve{
     grid-column: 1/5;
     grid-row:10;
-    background-color: #4CF5B4;
+    background-color: #A388E7;
 }
 .thirteen{
     grid-column: 1/5;
@@ -194,10 +194,9 @@ video{
 .eighteen{
     grid-column: 1/5;
     grid-row:15;
-    background-image: url('images/southside.png');
-    background-size: 100% 100%;
+    background-image: url('images/southside.svg');
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
 }
 
 /* book */
@@ -307,8 +306,6 @@ div.face-bottom{
 }
 
 .twelve{
-    font-family: 'LexendGiga-Regular', sans-serif;
-    font-style: italic;
     min-height: 150px;
     word-break: break-word;
     padding: 1rem;
@@ -327,7 +324,6 @@ textarea{
     src: url(fonts/NeueMachina-ultrabold.otf);
 }
 .letter{
-    font-family: NeueMachina-ultrabold, sans-serif;
     text-align: center;
     
     display: flex;
@@ -381,7 +377,7 @@ textarea{
 
 /* who I am */
 .seven{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     color: #000;
     background-color: #ea63ff;
     position: relative;
@@ -625,6 +621,12 @@ input[type=range]::-ms-fill-upper {
         text-align: left;
     }
     
+}
+
+@media screen and (min-width: 964px){
+    .phrase{
+        font-size: 18px;
+    }
 }
 
 
