@@ -1,12 +1,3 @@
-window.addEventListener('resize', resizeCanvas, false);
-
-function resizeCanvas() {
-    mysketch01.width = eight.offsetWidth;
-    mysketch01.height = eight.offsetHeight;
-    mysketch02.width = ten.offsetWidth;
-    mysketch02.height = ten.offsetHeight;
-}
-
 // sketch01
 const eight = document.querySelector('.eight');
 
@@ -15,17 +6,16 @@ var sketch01 = function(a) {
     a.setup = function() {
         let w = eight.offsetWidth;
         let h = eight.offsetHeight;
+        a.pixelDensity(1);
         a.createCanvas(w, h);
         
         graphics = a.createGraphics(w, h);
         graphics.fill('#fff');
         graphics.textFont('futura');
         graphics.textAlign(a.CENTER, a.CENTER);
-        graphics.textSize(200);
         graphics.textSize(w);
         graphics.text('a', w/2, h/2);
     };
-    
     a.draw = function() {
         a.background("#000");
         a.tileSize = 50;
@@ -48,6 +38,9 @@ var sketch01 = function(a) {
             };
         };
     };
+    a.windowResized = function() { 
+        a.resizeCanvas(eight.offsetWidth, eight.offsetHeight);
+    };
 };
 var mysketch01 = new p5(sketch01, 'eight');
 
@@ -61,6 +54,7 @@ let graphics3;
 
 var sketch02 = function (b) {    
     b.setup = function(){
+        b.pixelDensity(1);
         b.createCanvas(w1, h1);
         
         graphics2 = b.createGraphics(w1, h1);
@@ -87,6 +81,9 @@ var sketch02 = function (b) {
 
         b.copy(graphics2, -100, 0, 600, 250, 0, 0, 250 + val, 250)
         b.copy(graphics3, 0, 0, 600, 250, 250 + val, 0, 250 - val, 250)
+    };
+    b.windowResized = function() { 
+        b.resizeCanvas(ten.offsetWidth, ten.offsetHeight); 
     };
 };
 var mysketch02 = new p5(sketch02, 'ten');
