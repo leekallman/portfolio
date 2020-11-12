@@ -6,8 +6,6 @@ const vid = document.getElementsByTagName("video");
   
   function hoverVideo(e) {
     this.play();
-    // this.parentElement.parentElement.style.backgroundImage ="none";
-    // this.parentElement.parentElement.style.background ="#73C4D8";
   }
   function hideVideo(e) {
     this.pause();
