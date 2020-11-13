@@ -346,8 +346,8 @@ textarea{
     padding:1rem 0;
 }
 .clock{
-    width: 60px;
-    height:60px;
+    width: 40px;
+    height:40px;
     background-color: #FFD850;
     border-radius: 50px;
     position: relative;
@@ -379,7 +379,7 @@ textarea{
     color: #000;
     background-color: #ea63ff;
     position: relative;
-    max-height: 75vh;
+    max-height: 100vh;
 }
 .seven h2{
     letter-spacing: 3px;
@@ -513,7 +513,7 @@ input[type=range]::-ms-fill-upper {
         padding-right:2rem;
     }
     .phrase {
-        margin:2rem auto 4rem auto;
+        max-height: 75vh;
     }
 .clock{
     width: 80px;
