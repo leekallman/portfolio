@@ -383,7 +383,7 @@ textarea{
     color: #000;
     background-color: #ea63ff;
     position: relative;
-    max-height: 100vh;
+    /* height: 50vh; */
 }
 .seven h2{
     letter-spacing: 3px;
@@ -504,9 +504,6 @@ input[type=range]::-ms-fill-upper {
 }
 
 @media screen and (min-width: 374px) and (max-width: 800px){
-    .seven{
-        max-height: 50vh;
-    }
     .phrase {
         font-style: 16px;
     } 

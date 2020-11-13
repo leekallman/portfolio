@@ -42,7 +42,7 @@ const vid = document.getElementsByTagName("video");
   'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 
   'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 
   'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y',
-  'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R']
+  'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D'];
   
   for (let i = 0; i < letters.length; i++){
     const letter = document.createElement("div");
