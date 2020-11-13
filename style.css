@@ -262,6 +262,10 @@ div.face-bottom{
     transform: translateX(-50%) translateY(-50%)rotateX(-90deg)rotateY(180deg)translateZ(50px);
 }
 
+.six img{
+    padding:0.5rem;
+}
+
 /* playground */
 @font-face {
     font-family: Inter var;
@@ -282,7 +286,7 @@ div.face-bottom{
 }
 
 .playground{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: Inter var, sans-serif;
     transition: transform 2s;
     animation: animate-type 3s infinite alternate;
@@ -525,6 +529,9 @@ input[type=range]::-ms-fill-upper {
     }
     .second {
         height: 35px;
+    }
+    .playground{
+        font-size: 1.5rem;
     }
 }
 @media screen and (min-width: 600px){
