@@ -507,32 +507,26 @@ input[type=range]::-ms-fill-upper {
         font-style: 16px;
     } 
 }
-
 @media screen and (min-width: 400px){
     h1{
         padding-right:2rem;
     }
-    .phrase {
-        max-height: 75vh;
+    .clock{
+        width: 80px;
+        height:80px;
     }
-.clock{
-    width: 80px;
-    height:80px;
+    .hand{
+        height:30px;
+        bottom:40px;
+        left:40px;
+    }
+    .minute {
+        height: 20px;
+    }
+    .second {
+        height: 35px;
+    }
 }
-.hand{
-    height:30px;
-    bottom:40px;
-    left:40px;
-}
-.minute {
-    height: 20px;
-}
-.second {
-    height: 35px;
-}
-
-    
-}  
 @media screen and (min-width: 600px){
     h1{
         font-size: 67px;
@@ -636,6 +630,9 @@ input[type=range]::-ms-fill-upper {
     .social{
         display: flex;
         text-align: left;
+    }
+    .seven {
+        min-height: 25vh;
     }
     
 }
