@@ -195,9 +195,10 @@ video{
 .eighteen{
     grid-column: 1/5;
     grid-row:14;
-    background-image: url('images/southside.svg');
-    background-size: cover;
+    background-image: url('images/southside.png');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 /* book */
