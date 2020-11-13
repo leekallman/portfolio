@@ -523,12 +523,15 @@ input[type=range]::-ms-fill-upper {
         height:30px;
         bottom:40px;
         left:40px;
+        width:3px;
     }
     .minute {
         height: 20px;
     }
     .second {
         height: 35px;
+        width:1px;
+
     }
     .playground{
         font-size: 1.5rem;
