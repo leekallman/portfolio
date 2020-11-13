@@ -355,7 +355,7 @@ textarea{
 }
 .hand{
     position: absolute;
-    width:3px;
+    width:2px;
     height:15px;
     background-color: #ea63ff;
     
@@ -369,7 +369,7 @@ textarea{
     height: 10px;
 }
 .second {
-    height: 20px;
+    height: 18px;
     width:1px;
     background-color:#000;
 }
