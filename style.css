@@ -196,7 +196,7 @@ video{
     grid-column: 1/5;
     grid-row:14;
     background-image: url('images/southside.png');
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
 }
@@ -356,20 +356,20 @@ textarea{
 .hand{
     position: absolute;
     width:3px;
-    height:25px;
+    height:15px;
     background-color: #ea63ff;
     
-    bottom:30px;
-    left:30px;
+    bottom:20px;
+    left:20px;
     transform: rotate(90deg);
     transform-origin: 50% 100%;
     
 }
 .minute {
-    height: 15px;
+    height: 10px;
 }
 .second {
-    height: 28px;
+    height: 20px;
     width:1px;
     background-color:#000;
 }
