@@ -145,6 +145,7 @@ video{
     background-image: url('images/canvas.svg');
     background-color: #73C4D8;
     background-size: 100% 100%;
+    background-position-y: center;
     background-repeat: no-repeat;
     width: 100%;
 }
@@ -181,8 +182,10 @@ video{
     grid-column: 1/5;
     grid-row:9;
     background-image: url('images/VimmerbyStugby.svg');
-    background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 .seventeen{
     grid-column: 1/5;
