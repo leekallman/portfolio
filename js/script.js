@@ -40,7 +40,7 @@ const vid = document.getElementsByTagName("video");
   const letterBox = document.querySelector('.nine');
   const letters = ['D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y','D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I', 'V',
    'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y',
-    'D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I'];
+    'D', 'I', 'V'];
   
   for (let i = 0; i < letters.length; i++){
     const letter = document.createElement("p");
@@ -63,7 +63,7 @@ const vid = document.getElementsByTagName("video");
       // convert the distance to a "score" between 0 - 1 through an exponential-curve
       
       // div.innerHTML = score.toFixed(2)
-      div.style.transform ="scale(" + 3*score + ")";
+      div.style.transform ="scale(" + 3 * score + ")";
       div.style.fontWeight = (200 * Math.round(8 * score));
     });
   });

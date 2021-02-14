@@ -13,8 +13,8 @@ var sketch01 = function(a) {
         graphics.fill('#fff');
         graphics.textFont('futura');
         graphics.textAlign(a.CENTER, a.CENTER);
-        graphics.textSize(w*0.7);
-        graphics.text('Z', w/2, h/2);
+        graphics.textSize(w);
+        graphics.text('a', w/2, h/2);
     };
     a.draw = function() {
         a.background("#000");
