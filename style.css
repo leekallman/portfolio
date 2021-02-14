@@ -190,15 +190,16 @@ video{
 .seventeen{
     grid-column: 1/5;
     grid-row:12;
-    background-image: url('images/tort-v1.svg');
-    background-size: 100% 100%;
+    background-image: url('images/tortmagazine.png');
+    background-size: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     width: 100%;
 }
 .eighteen{
     grid-column: 1/5;
     grid-row:14;
-    background-image: url('images/southside.png');
+    background-image: url('images/southside4.png');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -541,7 +542,7 @@ input[type=range]::-ms-fill-upper {
     h1{
         font-size: 67px;
         line-height: 0.8;
-        letter-spacing: -5px;
+        letter-spacing: -3px;
     }
 }
 
