@@ -13,8 +13,8 @@ var sketch01 = function(a) {
         graphics.fill('#fff');
         graphics.textFont('futura');
         graphics.textAlign(a.CENTER, a.CENTER);
-        graphics.textSize(w);
-        graphics.text('a', w/2, h/2);
+        graphics.textSize(w*0.7);
+        graphics.text('Z', w/2, h/2);
     };
     a.draw = function() {
         a.background("#000");
@@ -59,19 +59,19 @@ var sketch02 = function (b) {
         
         graphics2 = b.createGraphics(w1, h1);
         graphics2.fill("#4CF5B4");
-        graphics2.textSize(100);
+        graphics2.textSize(80);
         graphics2.textAlign(b.CENTER, b.CENTER);
         graphics2.textFont('inter');
         graphics2.textStyle(b.BOLD); 
-        graphics2.text("SAY HI", w1/2, h1/2);
+        graphics2.text("available", w1/2, h1/2);
 
         graphics3 = b.createGraphics(w1, h1);
         graphics3.fill("#4CF5B4");
-        graphics3.textSize(100);
+        graphics3.textSize(80);
         graphics3.textAlign(b.CENTER, b.CENTER);
         graphics3.textFont('inter');
         graphics3.textStyle(b.BOLD); 
-        graphics3.text("SAY HI", w1/2, h1/2);
+        graphics3.text("for work", w1/2, h1/2);
     };
     
     b.draw = function() {

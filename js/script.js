@@ -16,8 +16,8 @@ const vid = document.getElementsByTagName("video");
   five.addEventListener('mousemove', function(event) {
     const x = event.pageX;
     const y = event.pageY;
-    const midX = x - window.innerWidth / 2;
-    const midY = y - window.innerHeight / 2;
+    const midX = x - window.innerWidth / 4;
+    const midY = y - window.innerHeight / 4;
     
     const book = document.querySelector('.book')
     book.style.left = x + 'px';
@@ -26,26 +26,24 @@ const vid = document.getElementsByTagName("video");
     book.style.transform = 'rotateX(' + midY + 'deg)rotateY(' + midX + 'deg)';
   });
   
-  // typing
-  document.querySelector("textarea").addEventListener("keyup", function() {
-    const typing = document.querySelector(".typing")
-    if(this.value !=""){
-      typing.innerHTML = this.value
-    } else {
-      typing.innerHTML = "start typing"
-    };
-  });
+  // // typing
+  // document.querySelector("textarea").addEventListener("keyup", function() {
+  //   const typing = document.querySelector(".typing")
+  //   if(this.value !=""){
+  //     typing.innerHTML = this.value
+  //   } else {
+  //     typing.innerHTML = "start typing"
+  //   };
+  // });
   
   // letters
   const letterBox = document.querySelector('.nine');
-  const letters = ['F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y', 
-  'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 
-  'A', 'Y', 'F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 
-  'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y','F', 'R', 'I', 'D', 'A', 'Y',
-  'F', 'R', 'I', 'D', 'A', 'Y', 'F', 'R', 'I', 'D'];
+  const letters = ['D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y','D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I', 'V',
+   'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y',
+    'D', 'I', 'V', 'E', 'R', 'S', 'I', 'T', 'Y', 'D', 'I'];
   
   for (let i = 0; i < letters.length; i++){
-    const letter = document.createElement("div");
+    const letter = document.createElement("p");
     letter.innerHTML = letters[i];
     letter.classList.add("letter");
     letterBox.appendChild(letter);
@@ -65,7 +63,7 @@ const vid = document.getElementsByTagName("video");
       // convert the distance to a "score" between 0 - 1 through an exponential-curve
       
       // div.innerHTML = score.toFixed(2)
-      div.style.transform ="scale(" + 2*score + ")";
+      div.style.transform ="scale(" + 3*score + ")";
       div.style.fontWeight = (200 * Math.round(8 * score));
     });
   });
@@ -73,7 +71,7 @@ const vid = document.getElementsByTagName("video");
   // clock
   function runClock() {
     let now = new Date();
-    let hour = now.getHours() % 12;
+    let hour = now.getHours()% 12;
     let min = now.getMinutes();
     let sec = now.getSeconds();
     let ms = now.getMilliseconds();
