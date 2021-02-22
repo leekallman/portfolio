@@ -97,7 +97,7 @@ video{
     grid-column: 1/4;
     grid-row:2;
     background-color: #4CF5B4;
-    position: relative;
+    display: flex;
 }
 .three{
     grid-column: 4/5;
@@ -107,108 +107,97 @@ video{
     grid-column: 1/5;
     grid-row:6;
     background-image: url('images/tort.png');
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
 }
 .five{
-    grid-column: 1/2;
+    grid-column: 1/5;
     grid-row:3;
     background-color: yellow;
 }
 .six{
-    grid-column: 2/5;
-    grid-row:3;
-}
-.seven{
     grid-column: 1/5;
     grid-row:4;
 }
+.seven{
+    grid-column: 1/5;
+    grid-row:5;
+}
 .eight{
     grid-column: 1/5;
-    grid-row:5; 
+    grid-row:6; 
     min-height: 300px;
     background-color: black;
 }
 .nine{
     grid-column: 1/5;
-    grid-row:10;
+    grid-row:11;
 }
 .ten{
     grid-column: 1/5;
-    grid-row:15;
+    grid-row:16;
 }
 .eleven{
     grid-column: 1/5;
-    grid-row:7;
+    grid-row:8;
     background-image: url('images/canvas.svg');
     background-color: #73C4D8;
     background-size: 100% 100%;
     background-position-y: center;
-    background-repeat: no-repeat;
     width: 100%;
 }
 .twelve{
     grid-column: 1/5;
-    grid-row:13;
-    background-color: #A388E7;
-    min-height:200px;
-}
-.thirteen{
-    grid-column: 1/5;
-    grid-row:8;
-    background-color: black;
-    background-image: url('images/wanderers.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height:100%;
-}
-.fourteen{
-    grid-column: 1/5;
-    grid-row:11;
-    background-image: url('images/asiansquat.png');
-    background-size: 100% 100%;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    width: 100%;
-}
-.fifthteen{
-    grid-column: 1/5;
-    grid-row:17;
-}
-.sixteen{
-    grid-column: 1/5;
-    grid-row:9;
+    grid-row:14;
     background-image: url('images/VimmerbyStugby.svg');
     background-size: 100% 100%;
     background-position-x: center;
-    background-repeat: no-repeat;
     width: 100%;
+}
+.thirteen{
+    grid-column: 1/5;
+    grid-row:9;
+    background-image: url('images/southside4.png');
+    background-size: cover;
+}
+.fourteen{
+    grid-column: 1/5;
+    grid-row:12;
+    background-image: url('images/asiansquat.png');
+    background-size: 104% 100%;
+    background-position-x: right;
+}
+.fifthteen{
+    grid-column: 1/5;
+    grid-row:18;
+}
+.sixteen{
+    grid-column: 1/5;
+    grid-row:10;
+    background-color: black;
+    background-image: url('images/wanderers.png');
+    background-size: cover;
+    width: 100%;
+    height:100%;
 }
 .seventeen{
     grid-column: 1/5;
-    grid-row:12;
-    background-image: url('images/tortmagazine.png');
+    grid-row:13;
+    background-image: url('images/motherly.png');
     background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
 }
 .eighteen{
     grid-column: 1/5;
-    grid-row:14;
-    background-image: url('images/southside4.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 100%;
+    grid-row:15;
+    background-image: url('images/tortmagazine.png');
+    background-size: 101%;
+    background-position: center top;
 }
 
 /* book */
 .five{
     perspective: 1500px;
-    /* min-height:300px; */
+    min-height:200px;
 }
 .book {
     transform-style: preserve-3d;
@@ -225,45 +214,45 @@ div.face {
     background-size: cover;
 }
 div.face-cover{
-    width:65px;
-    height:100px;
+    width: 100px;
+    height:150px;
     background-image: url(images/front.svg);
-    transform: translateX(-50%) translateY(-50%)rotateX(180deg)rotateY(270deg)translateZ(5px);
+    transform: translateX(-50%) translateY(-50%)rotateX(180deg)rotateY(270deg)translateZ(7.4px);
 }
 div.face-back{
-    width:65px;
-    height:100px;
+    width:100px;
+    height:150px;
     
     background-image: url(images/back.svg);
-    transform: translateX(-50%) translateY(-50%)rotateY(90deg)translateZ(5px);
+    transform: translateX(-50%) translateY(-50%)rotateY(90deg)translateZ(7.5px);
 }
 div.face-side{
-    width:10px;
-    height:100px;
+    width:15px;
+    height:150px;
     
     background-image: url(images/side.svg);
-    transform: translateX(-50%) translateY(-50%)rotateY(180deg)translateZ(32.5px);
+    transform: translateX(-50%) translateY(-50%)rotateY(180deg)translateZ(50px);
 }
 div.face-spine{
-    width:10px;
-    height:100px;
+    width:15px;
+    height:150px;
     
     background-image: url(images/spine.svg);
-    transform: translateX(-50%) translateY(-50%)rotateY(0deg)translateZ(32.5px);
+    transform: translateX(-50%) translateY(-50%)rotateY(0deg)translateZ(50px);
 }
 div.face-top{
-    width:10px;
-    height:65px;
+    width:15px;
+    height:100px;
     
-    background-image: url(images/top.svg);
-    transform: translateX(-50%) translateY(-50%)rotateX(90deg)rotateY(180deg)translateZ(50px);
+    background-image: url(images/top.png);
+    transform: translateX(-50%) translateY(-50%)rotateX(90deg)rotateY(180deg)translateZ(75px);
 }
 div.face-bottom{
-    width:10px;
-    height:65px;
-    
-    background-image: url(images/bottom.svg);
-    transform: translateX(-50%) translateY(-50%)rotateX(-90deg)rotateY(180deg)translateZ(50px);
+    width:15px;
+    height:100px;
+
+    background-image: url(images/bottom.png);
+    transform: translateX(-50%) translateY(-50%)rotateX(-90deg)rotateY(180deg)translateZ(75px);
 }
 
 .six img{
@@ -285,9 +274,6 @@ div.face-bottom{
         letter-spacing: 5px;
     }
 }
-.inner-.two{
-    position: relative;
-}
 
 .playground{
     font-size: 1rem;
@@ -295,21 +281,25 @@ div.face-bottom{
     transition: transform 2s;
     animation: animate-type 3s infinite alternate;
     color:white;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translateX(-50%) translateY(-50%);
+    width:100%;
 }
+
+.two p{
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+}
+
 
 /* connect */
 .ten {
     background-color: #73C4D8;
-    min-height: 200px;
+    min-height: 120px;
 }
 
 
 /* typing */
-@font-face {
+/* @font-face {
     font-family: LexendGiga-Regular;
     src: url(fonts/LexendGiga-Regular.ttf);
 }
@@ -323,7 +313,7 @@ textarea{
     width: 100%;
     height: 100%;
     opacity: 0;
-}
+} */
 
 /* letters */
 @font-face {
@@ -332,7 +322,6 @@ textarea{
 }
 .letter{
     text-align: center;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,7 +332,7 @@ textarea{
     background-color: #A388E7;
     color: #fff;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
 
 /* clock */
@@ -364,7 +353,6 @@ textarea{
 .hand{
     position: absolute;
     width:2px;
-    height:15px;
     background-color: #ea63ff;
     
     bottom:20px;
@@ -373,8 +361,12 @@ textarea{
     transform-origin: 50% 100%;
     
 }
-.minute {
-    height: 10px;
+.clock .hour{
+    height:25px;
+}
+
+.clock .minute {
+    height: 30px;
 }
 .second {
     height: 18px;
@@ -384,7 +376,7 @@ textarea{
 
 /* who I am */
 .seven{
-    color: #000;
+    color: #fff;
     background-color: #ea63ff;
     position: relative;
     /* height: 50vh; */
