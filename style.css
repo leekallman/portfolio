@@ -164,9 +164,8 @@ video{
     grid-column: 1/5;
     grid-row:12;
     background-image: url('images/asiansquat.png');
-    background-size: 100% 100%;
-    background-position-x: center;
-    width: 100%;
+    background-size: 104% 100%;
+    background-position-x: right;
 }
 .fifthteen{
     grid-column: 1/5;
